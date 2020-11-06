@@ -21,7 +21,7 @@ namespace WP_20201022_DEMO1
         {
             Poker p = new Poker();
 
-            List<int> poker = p.GetPoker(52);
+            List<int> poker = p.GetPoker(32);
 
 
             string msg = "";
@@ -29,11 +29,6 @@ namespace WP_20201022_DEMO1
             {
                 msg += $"{poker[i]} ,";
             }
-        }
-
-        private void pictureBox9_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

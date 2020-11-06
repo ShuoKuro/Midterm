@@ -102,7 +102,7 @@
             // btnGo
             // 
             this.btnGo.Font = new System.Drawing.Font("新細明體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnGo.Location = new System.Drawing.Point(1120, 12);
+            this.btnGo.Location = new System.Drawing.Point(1629, 5);
             this.btnGo.Name = "btnGo";
             this.btnGo.Size = new System.Drawing.Size(89, 30);
             this.btnGo.TabIndex = 0;
@@ -112,258 +112,257 @@
             // 
             // picCards1
             // 
-            this.picCards1.Location = new System.Drawing.Point(12, 49);
+            this.picCards1.Location = new System.Drawing.Point(12, 41);
             this.picCards1.Name = "picCards1";
-            this.picCards1.Size = new System.Drawing.Size(100, 130);
+            this.picCards1.Size = new System.Drawing.Size(208, 208);
             this.picCards1.TabIndex = 1;
             this.picCards1.TabStop = false;
             // 
             // picCards2
             // 
-            this.picCards2.Location = new System.Drawing.Point(162, 49);
+            this.picCards2.Location = new System.Drawing.Point(226, 41);
             this.picCards2.Name = "picCards2";
-            this.picCards2.Size = new System.Drawing.Size(100, 130);
+            this.picCards2.Size = new System.Drawing.Size(208, 208);
             this.picCards2.TabIndex = 2;
             this.picCards2.TabStop = false;
             // 
             // picCards3
             // 
-            this.picCards3.Location = new System.Drawing.Point(312, 49);
+            this.picCards3.Location = new System.Drawing.Point(440, 41);
             this.picCards3.Name = "picCards3";
-            this.picCards3.Size = new System.Drawing.Size(100, 130);
+            this.picCards3.Size = new System.Drawing.Size(208, 208);
             this.picCards3.TabIndex = 3;
             this.picCards3.TabStop = false;
             // 
             // picCards4
             // 
-            this.picCards4.Location = new System.Drawing.Point(462, 49);
+            this.picCards4.Location = new System.Drawing.Point(654, 41);
             this.picCards4.Name = "picCards4";
-            this.picCards4.Size = new System.Drawing.Size(100, 130);
+            this.picCards4.Size = new System.Drawing.Size(208, 208);
             this.picCards4.TabIndex = 4;
             this.picCards4.TabStop = false;
             // 
             // picCards5
             // 
-            this.picCards5.Location = new System.Drawing.Point(612, 49);
+            this.picCards5.Location = new System.Drawing.Point(868, 41);
             this.picCards5.Name = "picCards5";
-            this.picCards5.Size = new System.Drawing.Size(100, 130);
+            this.picCards5.Size = new System.Drawing.Size(208, 208);
             this.picCards5.TabIndex = 5;
             this.picCards5.TabStop = false;
             // 
             // picCards6
             // 
-            this.picCards6.Location = new System.Drawing.Point(762, 49);
+            this.picCards6.Location = new System.Drawing.Point(1082, 41);
             this.picCards6.Name = "picCards6";
-            this.picCards6.Size = new System.Drawing.Size(100, 130);
+            this.picCards6.Size = new System.Drawing.Size(208, 208);
             this.picCards6.TabIndex = 6;
             this.picCards6.TabStop = false;
             // 
             // picCards7
             // 
-            this.picCards7.Location = new System.Drawing.Point(912, 49);
+            this.picCards7.Location = new System.Drawing.Point(1296, 41);
             this.picCards7.Name = "picCards7";
-            this.picCards7.Size = new System.Drawing.Size(100, 130);
+            this.picCards7.Size = new System.Drawing.Size(208, 208);
             this.picCards7.TabIndex = 7;
             this.picCards7.TabStop = false;
             // 
             // picCards8
             // 
-            this.picCards8.Location = new System.Drawing.Point(1062, 49);
+            this.picCards8.Location = new System.Drawing.Point(1510, 41);
             this.picCards8.Name = "picCards8";
-            this.picCards8.Size = new System.Drawing.Size(100, 130);
+            this.picCards8.Size = new System.Drawing.Size(208, 208);
             this.picCards8.TabIndex = 8;
             this.picCards8.TabStop = false;
             // 
             // picCards16
             // 
-            this.picCards16.Location = new System.Drawing.Point(1062, 199);
+            this.picCards16.Location = new System.Drawing.Point(1510, 255);
             this.picCards16.Name = "picCards16";
-            this.picCards16.Size = new System.Drawing.Size(100, 130);
+            this.picCards16.Size = new System.Drawing.Size(208, 208);
             this.picCards16.TabIndex = 16;
             this.picCards16.TabStop = false;
-            this.picCards16.Click += new System.EventHandler(this.pictureBox9_Click);
             // 
             // picCards15
             // 
-            this.picCards15.Location = new System.Drawing.Point(912, 199);
+            this.picCards15.Location = new System.Drawing.Point(1296, 255);
             this.picCards15.Name = "picCards15";
-            this.picCards15.Size = new System.Drawing.Size(100, 130);
+            this.picCards15.Size = new System.Drawing.Size(208, 208);
             this.picCards15.TabIndex = 15;
             this.picCards15.TabStop = false;
             // 
             // picCards14
             // 
-            this.picCards14.Location = new System.Drawing.Point(762, 199);
+            this.picCards14.Location = new System.Drawing.Point(1082, 255);
             this.picCards14.Name = "picCards14";
-            this.picCards14.Size = new System.Drawing.Size(100, 130);
+            this.picCards14.Size = new System.Drawing.Size(208, 208);
             this.picCards14.TabIndex = 14;
             this.picCards14.TabStop = false;
             // 
             // picCards13
             // 
-            this.picCards13.Location = new System.Drawing.Point(612, 199);
+            this.picCards13.Location = new System.Drawing.Point(868, 255);
             this.picCards13.Name = "picCards13";
-            this.picCards13.Size = new System.Drawing.Size(100, 130);
+            this.picCards13.Size = new System.Drawing.Size(208, 208);
             this.picCards13.TabIndex = 13;
             this.picCards13.TabStop = false;
             // 
             // picCards12
             // 
-            this.picCards12.Location = new System.Drawing.Point(462, 199);
+            this.picCards12.Location = new System.Drawing.Point(654, 255);
             this.picCards12.Name = "picCards12";
-            this.picCards12.Size = new System.Drawing.Size(100, 130);
+            this.picCards12.Size = new System.Drawing.Size(208, 208);
             this.picCards12.TabIndex = 12;
             this.picCards12.TabStop = false;
             // 
             // picCards11
             // 
-            this.picCards11.Location = new System.Drawing.Point(312, 199);
+            this.picCards11.Location = new System.Drawing.Point(440, 255);
             this.picCards11.Name = "picCards11";
-            this.picCards11.Size = new System.Drawing.Size(100, 130);
+            this.picCards11.Size = new System.Drawing.Size(208, 208);
             this.picCards11.TabIndex = 11;
             this.picCards11.TabStop = false;
             // 
             // picCards10
             // 
-            this.picCards10.Location = new System.Drawing.Point(162, 199);
+            this.picCards10.Location = new System.Drawing.Point(226, 255);
             this.picCards10.Name = "picCards10";
-            this.picCards10.Size = new System.Drawing.Size(100, 130);
+            this.picCards10.Size = new System.Drawing.Size(208, 208);
             this.picCards10.TabIndex = 10;
             this.picCards10.TabStop = false;
             // 
             // picCards9
             // 
-            this.picCards9.Location = new System.Drawing.Point(12, 199);
+            this.picCards9.Location = new System.Drawing.Point(12, 255);
             this.picCards9.Name = "picCards9";
-            this.picCards9.Size = new System.Drawing.Size(100, 130);
+            this.picCards9.Size = new System.Drawing.Size(208, 208);
             this.picCards9.TabIndex = 9;
             this.picCards9.TabStop = false;
             // 
             // picCards24
             // 
-            this.picCards24.Location = new System.Drawing.Point(1062, 349);
+            this.picCards24.Location = new System.Drawing.Point(1510, 469);
             this.picCards24.Name = "picCards24";
-            this.picCards24.Size = new System.Drawing.Size(100, 130);
+            this.picCards24.Size = new System.Drawing.Size(208, 208);
             this.picCards24.TabIndex = 24;
             this.picCards24.TabStop = false;
             // 
             // picCards23
             // 
-            this.picCards23.Location = new System.Drawing.Point(912, 349);
+            this.picCards23.Location = new System.Drawing.Point(1296, 469);
             this.picCards23.Name = "picCards23";
-            this.picCards23.Size = new System.Drawing.Size(100, 130);
+            this.picCards23.Size = new System.Drawing.Size(208, 208);
             this.picCards23.TabIndex = 23;
             this.picCards23.TabStop = false;
             // 
             // picCards22
             // 
-            this.picCards22.Location = new System.Drawing.Point(762, 349);
+            this.picCards22.Location = new System.Drawing.Point(1082, 469);
             this.picCards22.Name = "picCards22";
-            this.picCards22.Size = new System.Drawing.Size(100, 130);
+            this.picCards22.Size = new System.Drawing.Size(208, 208);
             this.picCards22.TabIndex = 22;
             this.picCards22.TabStop = false;
             // 
             // picCards21
             // 
-            this.picCards21.Location = new System.Drawing.Point(612, 349);
+            this.picCards21.Location = new System.Drawing.Point(868, 469);
             this.picCards21.Name = "picCards21";
-            this.picCards21.Size = new System.Drawing.Size(100, 130);
+            this.picCards21.Size = new System.Drawing.Size(208, 208);
             this.picCards21.TabIndex = 21;
             this.picCards21.TabStop = false;
             // 
             // picCards20
             // 
-            this.picCards20.Location = new System.Drawing.Point(462, 349);
+            this.picCards20.Location = new System.Drawing.Point(654, 469);
             this.picCards20.Name = "picCards20";
-            this.picCards20.Size = new System.Drawing.Size(100, 130);
+            this.picCards20.Size = new System.Drawing.Size(208, 208);
             this.picCards20.TabIndex = 20;
             this.picCards20.TabStop = false;
             // 
             // picCards19
             // 
-            this.picCards19.Location = new System.Drawing.Point(312, 349);
+            this.picCards19.Location = new System.Drawing.Point(440, 469);
             this.picCards19.Name = "picCards19";
-            this.picCards19.Size = new System.Drawing.Size(100, 130);
+            this.picCards19.Size = new System.Drawing.Size(208, 208);
             this.picCards19.TabIndex = 19;
             this.picCards19.TabStop = false;
             // 
             // picCards18
             // 
-            this.picCards18.Location = new System.Drawing.Point(162, 349);
+            this.picCards18.Location = new System.Drawing.Point(226, 469);
             this.picCards18.Name = "picCards18";
-            this.picCards18.Size = new System.Drawing.Size(100, 130);
+            this.picCards18.Size = new System.Drawing.Size(208, 208);
             this.picCards18.TabIndex = 18;
             this.picCards18.TabStop = false;
             // 
             // picCards17
             // 
-            this.picCards17.Location = new System.Drawing.Point(12, 349);
+            this.picCards17.Location = new System.Drawing.Point(12, 469);
             this.picCards17.Name = "picCards17";
-            this.picCards17.Size = new System.Drawing.Size(100, 130);
+            this.picCards17.Size = new System.Drawing.Size(208, 208);
             this.picCards17.TabIndex = 17;
             this.picCards17.TabStop = false;
             // 
             // picCards32
             // 
-            this.picCards32.Location = new System.Drawing.Point(1062, 499);
+            this.picCards32.Location = new System.Drawing.Point(1510, 683);
             this.picCards32.Name = "picCards32";
-            this.picCards32.Size = new System.Drawing.Size(100, 130);
+            this.picCards32.Size = new System.Drawing.Size(208, 208);
             this.picCards32.TabIndex = 32;
             this.picCards32.TabStop = false;
             // 
             // picCards31
             // 
-            this.picCards31.Location = new System.Drawing.Point(912, 499);
+            this.picCards31.Location = new System.Drawing.Point(1296, 683);
             this.picCards31.Name = "picCards31";
-            this.picCards31.Size = new System.Drawing.Size(100, 130);
+            this.picCards31.Size = new System.Drawing.Size(208, 208);
             this.picCards31.TabIndex = 31;
             this.picCards31.TabStop = false;
             // 
             // picCards30
             // 
-            this.picCards30.Location = new System.Drawing.Point(762, 499);
+            this.picCards30.Location = new System.Drawing.Point(1082, 683);
             this.picCards30.Name = "picCards30";
-            this.picCards30.Size = new System.Drawing.Size(100, 130);
+            this.picCards30.Size = new System.Drawing.Size(208, 208);
             this.picCards30.TabIndex = 30;
             this.picCards30.TabStop = false;
             // 
             // picCards29
             // 
-            this.picCards29.Location = new System.Drawing.Point(612, 499);
+            this.picCards29.Location = new System.Drawing.Point(868, 683);
             this.picCards29.Name = "picCards29";
-            this.picCards29.Size = new System.Drawing.Size(100, 130);
+            this.picCards29.Size = new System.Drawing.Size(208, 208);
             this.picCards29.TabIndex = 29;
             this.picCards29.TabStop = false;
             // 
             // picCards28
             // 
-            this.picCards28.Location = new System.Drawing.Point(462, 499);
+            this.picCards28.Location = new System.Drawing.Point(654, 683);
             this.picCards28.Name = "picCards28";
-            this.picCards28.Size = new System.Drawing.Size(100, 130);
+            this.picCards28.Size = new System.Drawing.Size(208, 208);
             this.picCards28.TabIndex = 28;
             this.picCards28.TabStop = false;
             // 
             // picCards27
             // 
-            this.picCards27.Location = new System.Drawing.Point(312, 499);
+            this.picCards27.Location = new System.Drawing.Point(440, 683);
             this.picCards27.Name = "picCards27";
-            this.picCards27.Size = new System.Drawing.Size(100, 130);
+            this.picCards27.Size = new System.Drawing.Size(208, 208);
             this.picCards27.TabIndex = 27;
             this.picCards27.TabStop = false;
             // 
             // picCards26
             // 
-            this.picCards26.Location = new System.Drawing.Point(162, 499);
+            this.picCards26.Location = new System.Drawing.Point(226, 683);
             this.picCards26.Name = "picCards26";
-            this.picCards26.Size = new System.Drawing.Size(100, 130);
+            this.picCards26.Size = new System.Drawing.Size(208, 208);
             this.picCards26.TabIndex = 26;
             this.picCards26.TabStop = false;
             // 
             // picCards25
             // 
-            this.picCards25.Location = new System.Drawing.Point(12, 499);
+            this.picCards25.Location = new System.Drawing.Point(12, 683);
             this.picCards25.Name = "picCards25";
-            this.picCards25.Size = new System.Drawing.Size(100, 130);
+            this.picCards25.Size = new System.Drawing.Size(208, 208);
             this.picCards25.TabIndex = 25;
             this.picCards25.TabStop = false;
             // 
@@ -411,7 +410,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1221, 639);
+            this.ClientSize = new System.Drawing.Size(1743, 898);
             this.Controls.Add(this.labWrong);
             this.Controls.Add(this.labCorrect);
             this.Controls.Add(this.wrong);
