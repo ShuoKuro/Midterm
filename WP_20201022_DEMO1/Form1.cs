@@ -23,13 +23,17 @@ namespace WP_20201022_DEMO1
 
             List<int> poker = p.GetPoker(52);
 
+
             string msg = "";
             for (int i = 0; i < poker.Count; i++)
             {
                 msg += $"{poker[i]} ,";
             }
+        }
 
-            rtbMsg.Text = msg + "\n";
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
