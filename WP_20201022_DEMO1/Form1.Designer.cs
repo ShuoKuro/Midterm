@@ -117,6 +117,7 @@
             this.picCards1.Size = new System.Drawing.Size(208, 208);
             this.picCards1.TabIndex = 1;
             this.picCards1.TabStop = false;
+            this.picCards1.Click += new System.EventHandler(this.picCards1_Click);
             // 
             // picCards2
             // 
@@ -125,6 +126,7 @@
             this.picCards2.Size = new System.Drawing.Size(208, 208);
             this.picCards2.TabIndex = 2;
             this.picCards2.TabStop = false;
+            this.picCards2.Click += new System.EventHandler(this.picCards2_Click);
             // 
             // picCards3
             // 
@@ -133,6 +135,7 @@
             this.picCards3.Size = new System.Drawing.Size(208, 208);
             this.picCards3.TabIndex = 3;
             this.picCards3.TabStop = false;
+            this.picCards3.Click += new System.EventHandler(this.picCards3_Click);
             // 
             // picCards4
             // 
@@ -141,6 +144,7 @@
             this.picCards4.Size = new System.Drawing.Size(208, 208);
             this.picCards4.TabIndex = 4;
             this.picCards4.TabStop = false;
+            this.picCards4.Click += new System.EventHandler(this.picCards4_Click);
             // 
             // picCards5
             // 
@@ -149,6 +153,7 @@
             this.picCards5.Size = new System.Drawing.Size(208, 208);
             this.picCards5.TabIndex = 5;
             this.picCards5.TabStop = false;
+            this.picCards5.Click += new System.EventHandler(this.picCards5_Click);
             // 
             // picCards6
             // 
@@ -157,6 +162,7 @@
             this.picCards6.Size = new System.Drawing.Size(208, 208);
             this.picCards6.TabIndex = 6;
             this.picCards6.TabStop = false;
+            this.picCards6.Click += new System.EventHandler(this.picCards6_Click);
             // 
             // picCards7
             // 
@@ -165,6 +171,7 @@
             this.picCards7.Size = new System.Drawing.Size(208, 208);
             this.picCards7.TabIndex = 7;
             this.picCards7.TabStop = false;
+            this.picCards7.Click += new System.EventHandler(this.picCards7_Click);
             // 
             // picCards8
             // 
@@ -173,6 +180,7 @@
             this.picCards8.Size = new System.Drawing.Size(208, 208);
             this.picCards8.TabIndex = 8;
             this.picCards8.TabStop = false;
+            this.picCards8.Click += new System.EventHandler(this.picCards8_Click);
             // 
             // picCards16
             // 
@@ -181,6 +189,7 @@
             this.picCards16.Size = new System.Drawing.Size(208, 208);
             this.picCards16.TabIndex = 16;
             this.picCards16.TabStop = false;
+            this.picCards16.Click += new System.EventHandler(this.picCards16_Click);
             // 
             // picCards15
             // 
@@ -189,6 +198,7 @@
             this.picCards15.Size = new System.Drawing.Size(208, 208);
             this.picCards15.TabIndex = 15;
             this.picCards15.TabStop = false;
+            this.picCards15.Click += new System.EventHandler(this.picCards15_Click);
             // 
             // picCards14
             // 
@@ -197,6 +207,7 @@
             this.picCards14.Size = new System.Drawing.Size(208, 208);
             this.picCards14.TabIndex = 14;
             this.picCards14.TabStop = false;
+            this.picCards14.Click += new System.EventHandler(this.picCards14_Click);
             // 
             // picCards13
             // 
@@ -205,6 +216,7 @@
             this.picCards13.Size = new System.Drawing.Size(208, 208);
             this.picCards13.TabIndex = 13;
             this.picCards13.TabStop = false;
+            this.picCards13.Click += new System.EventHandler(this.picCards13_Click);
             // 
             // picCards12
             // 
@@ -213,6 +225,7 @@
             this.picCards12.Size = new System.Drawing.Size(208, 208);
             this.picCards12.TabIndex = 12;
             this.picCards12.TabStop = false;
+            this.picCards12.Click += new System.EventHandler(this.picCards12_Click);
             // 
             // picCards11
             // 
@@ -221,6 +234,7 @@
             this.picCards11.Size = new System.Drawing.Size(208, 208);
             this.picCards11.TabIndex = 11;
             this.picCards11.TabStop = false;
+            this.picCards11.Click += new System.EventHandler(this.picCards11_Click);
             // 
             // picCards10
             // 
@@ -229,6 +243,7 @@
             this.picCards10.Size = new System.Drawing.Size(208, 208);
             this.picCards10.TabIndex = 10;
             this.picCards10.TabStop = false;
+            this.picCards10.Click += new System.EventHandler(this.picCards10_Click);
             // 
             // picCards9
             // 
@@ -237,6 +252,7 @@
             this.picCards9.Size = new System.Drawing.Size(208, 208);
             this.picCards9.TabIndex = 9;
             this.picCards9.TabStop = false;
+            this.picCards9.Click += new System.EventHandler(this.picCards9_Click);
             // 
             // picCards24
             // 
@@ -245,6 +261,7 @@
             this.picCards24.Size = new System.Drawing.Size(208, 208);
             this.picCards24.TabIndex = 24;
             this.picCards24.TabStop = false;
+            this.picCards24.Click += new System.EventHandler(this.picCards24_Click);
             // 
             // picCards23
             // 
@@ -253,6 +270,7 @@
             this.picCards23.Size = new System.Drawing.Size(208, 208);
             this.picCards23.TabIndex = 23;
             this.picCards23.TabStop = false;
+            this.picCards23.Click += new System.EventHandler(this.picCards23_Click);
             // 
             // picCards22
             // 
@@ -261,6 +279,7 @@
             this.picCards22.Size = new System.Drawing.Size(208, 208);
             this.picCards22.TabIndex = 22;
             this.picCards22.TabStop = false;
+            this.picCards22.Click += new System.EventHandler(this.picCards22_Click);
             // 
             // picCards21
             // 
@@ -269,6 +288,7 @@
             this.picCards21.Size = new System.Drawing.Size(208, 208);
             this.picCards21.TabIndex = 21;
             this.picCards21.TabStop = false;
+            this.picCards21.Click += new System.EventHandler(this.picCards21_Click);
             // 
             // picCards20
             // 
@@ -277,6 +297,7 @@
             this.picCards20.Size = new System.Drawing.Size(208, 208);
             this.picCards20.TabIndex = 20;
             this.picCards20.TabStop = false;
+            this.picCards20.Click += new System.EventHandler(this.picCards20_Click);
             // 
             // picCards19
             // 
@@ -285,6 +306,7 @@
             this.picCards19.Size = new System.Drawing.Size(208, 208);
             this.picCards19.TabIndex = 19;
             this.picCards19.TabStop = false;
+            this.picCards19.Click += new System.EventHandler(this.picCards19_Click);
             // 
             // picCards18
             // 
@@ -293,6 +315,7 @@
             this.picCards18.Size = new System.Drawing.Size(208, 208);
             this.picCards18.TabIndex = 18;
             this.picCards18.TabStop = false;
+            this.picCards18.Click += new System.EventHandler(this.picCards18_Click);
             // 
             // picCards17
             // 
@@ -301,6 +324,7 @@
             this.picCards17.Size = new System.Drawing.Size(208, 208);
             this.picCards17.TabIndex = 17;
             this.picCards17.TabStop = false;
+            this.picCards17.Click += new System.EventHandler(this.picCards17_Click);
             // 
             // picCards32
             // 
@@ -309,6 +333,7 @@
             this.picCards32.Size = new System.Drawing.Size(208, 208);
             this.picCards32.TabIndex = 32;
             this.picCards32.TabStop = false;
+            this.picCards32.Click += new System.EventHandler(this.picCards32_Click);
             // 
             // picCards31
             // 
@@ -317,6 +342,7 @@
             this.picCards31.Size = new System.Drawing.Size(208, 208);
             this.picCards31.TabIndex = 31;
             this.picCards31.TabStop = false;
+            this.picCards31.Click += new System.EventHandler(this.picCards31_Click);
             // 
             // picCards30
             // 
@@ -325,6 +351,7 @@
             this.picCards30.Size = new System.Drawing.Size(208, 208);
             this.picCards30.TabIndex = 30;
             this.picCards30.TabStop = false;
+            this.picCards30.Click += new System.EventHandler(this.picCards30_Click);
             // 
             // picCards29
             // 
@@ -333,6 +360,7 @@
             this.picCards29.Size = new System.Drawing.Size(208, 208);
             this.picCards29.TabIndex = 29;
             this.picCards29.TabStop = false;
+            this.picCards29.Click += new System.EventHandler(this.picCards29_Click);
             // 
             // picCards28
             // 
@@ -341,6 +369,7 @@
             this.picCards28.Size = new System.Drawing.Size(208, 208);
             this.picCards28.TabIndex = 28;
             this.picCards28.TabStop = false;
+            this.picCards28.Click += new System.EventHandler(this.picCards28_Click);
             // 
             // picCards27
             // 
@@ -349,6 +378,7 @@
             this.picCards27.Size = new System.Drawing.Size(208, 208);
             this.picCards27.TabIndex = 27;
             this.picCards27.TabStop = false;
+            this.picCards27.Click += new System.EventHandler(this.picCards27_Click);
             // 
             // picCards26
             // 
@@ -357,6 +387,7 @@
             this.picCards26.Size = new System.Drawing.Size(208, 208);
             this.picCards26.TabIndex = 26;
             this.picCards26.TabStop = false;
+            this.picCards26.Click += new System.EventHandler(this.picCards26_Click);
             // 
             // picCards25
             // 
@@ -365,6 +396,7 @@
             this.picCards25.Size = new System.Drawing.Size(208, 208);
             this.picCards25.TabIndex = 25;
             this.picCards25.TabStop = false;
+            this.picCards25.Click += new System.EventHandler(this.picCards25_Click);
             // 
             // correct
             // 

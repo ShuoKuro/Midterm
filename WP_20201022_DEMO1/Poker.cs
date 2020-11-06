@@ -23,8 +23,7 @@ namespace WP_20201022_DEMO1
                 for (int i = count - 2; i > 0; i--)
                 {
                     int lastIndex = i + 1;                    //方便閱讀
-                    int randomIndex = (new Random()).Next(i); //抽牌
-
+                    int randomIndex = (new Random()).Next(i); //抽牌\
                     //交換
                     int temp = result[lastIndex];
                     result[lastIndex] = result[randomIndex];
