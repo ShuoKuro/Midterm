@@ -450,6 +450,7 @@
             this.Controls.Add(this.btnGo);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picCards1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCards2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCards3)).EndInit();

@@ -65,6 +65,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -80,23 +81,55 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="res\000.png" />
-    <Content Include="res\001.png" />
-    <Content Include="res\002.png" />
-    <Content Include="res\003.png" />
-    <Content Include="res\004.png" />
-    <Content Include="res\005.png" />
-    <Content Include="res\006.png" />
-    <Content Include="res\007.png" />
-    <Content Include="res\008.png" />
-    <Content Include="res\009.png" />
-    <Content Include="res\010.png" />
-    <Content Include="res\011.png" />
-    <Content Include="res\012.png" />
-    <Content Include="res\013.png" />
-    <Content Include="res\014.png" />
-    <Content Include="res\015.png" />
-    <Content Include="res\016.png" />
+    <None Include="res\000.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\002.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\003.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\004.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\005.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\006.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\007.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\008.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\009.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\010.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\011.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\012.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\013.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\014.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\015.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\016.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
