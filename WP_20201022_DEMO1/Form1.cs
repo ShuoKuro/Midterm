@@ -140,352 +140,192 @@ namespace WP_20201022_DEMO1
                     a = poker[0] + 1;
                     cheak();
                     picCards1.Image = imagelist[c];
-                    if (covering)
-                    {
-                        coverUP();
-                        covering = false;
-                    }
                     break;
 
                 case 2:
                     a = poker[1] + 1;
                     cheak();
                     picCards2.Image = imagelist[c];
-                    if (covering)
-                    {
-                        coverUP();
-                        covering = false;
-                    }
                     break;
 
                 case 3:
                     a = poker[2] + 1;
                     cheak();
                     picCards3.Image = imagelist[c];
-                    if (covering)
-                    {
-                        coverUP();
-                        covering = false;
-                    }
                     break;
 
                 case 4:
                     a = poker[3] + 1;
                     cheak();
                     picCards4.Image = imagelist[c];
-                    if (covering)
-                    {
-                        coverUP();
-                        covering = false;
-                    }
                     break;
 
                 case 5:
                     a = poker[4] + 1;
                     cheak();
                     picCards5.Image = imagelist[c];
-                    if (covering)
-                    {
-                        coverUP();
-                        covering = false;
-                    }
                     break;
 
                 case 6:
                     a = poker[5] + 1;
                     cheak();
                     picCards6.Image = imagelist[c];
-                    if (covering)
-                    {
-                        coverUP();
-                        covering = false;
-                    }
                     break;
 
                 case 7:
                     a = poker[6] + 1;
                     cheak();
                     picCards7.Image = imagelist[c];
-                    if (covering)
-                    {
-                        coverUP();
-                        covering = false;
-                    }
                     break;
 
                 case 8:
                     a = poker[7] + 1;
                     cheak();
                     picCards8.Image = imagelist[c];
-                    if (covering)
-                    {
-                        coverUP();
-                        covering = false;
-                    }
                     break;
 
                 case 9:
                     a = poker[8] + 1;
                     cheak();
                     picCards9.Image = imagelist[c];
-                    if (covering)
-                    {
-                        coverUP();
-                        covering = false;
-                    }
                     break;
 
                 case 10:
                     a = poker[9] + 1;
                     cheak();
                     picCards10.Image = imagelist[c];
-                    if (covering)
-                    {
-                        coverUP();
-                        covering = false;
-                    }
                     break;
 
                 case 11:
                     a = poker[10] + 1;
                     cheak();
                     picCards11.Image = imagelist[c];
-                    if (covering)
-                    {
-                        coverUP();
-                        covering = false;
-                    }
                     break;
 
                 case 12:
                     a = poker[11] + 1;
                     cheak();
                     picCards12.Image = imagelist[c];
-                    if (covering)
-                    {
-                        coverUP();
-                        covering = false;
-                    }
                     break;
 
                 case 13:
                     a = poker[12] + 1;
                     cheak();
                     picCards13.Image = imagelist[c];
-                    if (covering)
-                    {
-                        coverUP();
-                        covering = false;
-                    }
                     break;
 
                 case 14:
                     a = poker[13] + 1;
                     cheak();
                     picCards14.Image = imagelist[c];
-                    if (covering)
-                    {
-                        coverUP();
-                        covering = false;
-                    }
                     break;
 
                 case 15:
                     a = poker[14] + 1;
                     cheak();
                     picCards15.Image = imagelist[c];
-                    if (covering)
-                    {
-                        coverUP();
-                        covering = false;
-                    }
                     break;
 
                 case 16:
                     a = poker[15] + 1;
                     cheak();
                     picCards16.Image = imagelist[c];
-                    if (covering)
-                    {
-                        coverUP();
-                        covering = false;
-                    }
                     break;
 
                 case 17:
                     a = poker[16] + 1;
                     cheak();
                     picCards17.Image = imagelist[c];
-                    if (covering)
-                    {
-                        coverUP();
-                        covering = false;
-                    }
                     break;
 
                 case 18:
                     a = poker[17] + 1;
                     cheak();
                     picCards18.Image = imagelist[c];
-                    if (covering)
-                    {
-                        coverUP();
-                        covering = false;
-                    }
                     break;
 
                 case 19:
                     a = poker[18] + 1;
                     cheak();
                     picCards19.Image = imagelist[c];
-                    if (covering)
-                    {
-                        coverUP();
-                        covering = false;
-                    }
                     break;
 
                 case 20:
                     a = poker[19] + 1;
                     cheak();
                     picCards20.Image = imagelist[c];
-                    if (covering)
-                    {
-                        coverUP();
-                        covering = false;
-                    }
                     break;
 
                 case 21:
                     a = poker[20] + 1;
                     cheak();
                     picCards21.Image = imagelist[c];
-                    if (covering)
-                    {
-                        coverUP();
-                        covering = false;
-                    }
                     break;
 
                 case 22:
                     a = poker[21] + 1;
                     cheak();
                     picCards22.Image = imagelist[c];
-                    if (covering)
-                    {
-                        coverUP();
-                        covering = false;
-                    }
                     break;
 
                 case 23:
                     a = poker[22] + 1;
                     cheak();
                     picCards23.Image = imagelist[c];
-                    if (covering)
-                    {
-                        coverUP();
-                        covering = false;
-                    }
                     break;
 
                 case 24:
                     a = poker[23] + 1;
                     cheak();
                     picCards24.Image = imagelist[c];
-                    if (covering)
-                    {
-                        coverUP();
-                        covering = false;
-                    }
                     break;
 
                 case 25:
                     a = poker[24] + 1;
                     cheak();
                     picCards25.Image = imagelist[c];
-                    if (covering)
-                    {
-                        coverUP();
-                        covering = false;
-                    }
                     break;
 
                 case 26:
                     a = poker[25] + 1;
                     cheak();
                     picCards26.Image = imagelist[c];
-                    if (covering)
-                    {
-                        coverUP();
-                        covering = false;
-                    }
                     break;
 
                 case 27:
                     a = poker[26] + 1;
                     cheak();
                     picCards27.Image = imagelist[c];
-                    if (covering)
-                    {
-                        coverUP();
-                        covering = false;
-                    }
                     break;
 
                 case 28:
                     a = poker[27] + 1;
                     cheak();
                     picCards28.Image = imagelist[c];
-                    if (covering)
-                    {
-                        coverUP();
-                        covering = false;
-                    }
                     break;
 
                 case 29:
                     a = poker[28] + 1;
                     cheak();
                     picCards29.Image = imagelist[c];
-                    if (covering)
-                    {
-                        coverUP();
-                        covering = false;
-                    }
                     break;
 
                 case 30:
                     a = poker[29] + 1;
                     cheak();
                     picCards30.Image = imagelist[c];
-                    if (covering)
-                    {
-                        coverUP();
-                        covering = false;
-                    }
                     break;
 
                 case 31:
                     a = poker[30] + 1;
                     cheak();
                     picCards31.Image = imagelist[c];
-                    if (covering)
-                    {
-                        coverUP();
-                        covering = false;
-                    }
                     break;
 
                 case 32:
                     a = poker[31] + 1;
                     cheak();
                     picCards32.Image = imagelist[c];
-                    if (covering)
-                    {
-                        coverUP();
-                        covering = false;
-                    }
                     break;
             }
         }
@@ -626,260 +466,549 @@ namespace WP_20201022_DEMO1
 
         private void cheak()
         {
-            if (clickCounter > 1)
+            switch (clickCounter)
             {
-                
-                if (a == b)
-                {
-                    countCorrect += 1;
-                    labCorrect.Text = countCorrect + "";
+                case 1:
+                    lastClick = cheakClick;
+                    c = a; //显示a
+                    b = a; //记下上一次按的什么
+                    break;
+                case 2:
+                    c = a;
                     clickCounter = 0;
-                    c = a;
-                }
-                if (a != b)
-                {
-                    countWrong += 1;
-                    labWrong.Text = countWrong + "";
-                    c = a;
-                    covering = true;
-                }
+                    if (a == b)
+                    {
+                        countCorrect += 1;
+                        labCorrect.Text = countCorrect + "";
+                    }
+                    if (a != b)
+                    {
+                        countWrong += 1;
+                        labWrong.Text = countWrong + "";
+                        covering = true;
+                    }
+                    break;
             }
-            else
-            {
-                lastClick = cheakClick;
-                c = a;
-                b = a; //记下上一次按的什么
-            }
-
         }
 
+    
 
-        #region 按下pic
-        private void picCards1_Click(object sender, EventArgs e)
-        {
-            cheakClick = 1;
-            clickCounter += 1;
-            clicking();
-        }
 
-        private void picCards2_Click(object sender, EventArgs e)
-        {
-            cheakClick = 2;
-            clickCounter += 1;
-            clicking();
-        }
+    #region 按下pic
+    private void picCards1_Click(object sender, EventArgs e)
+    {
+        cheakClick = 1;
+        clickCounter += 1;
+        clicking();
+    }
 
-        private void picCards3_Click(object sender, EventArgs e)
-        {
-            cheakClick = 3;
-            clickCounter += 1;
-            clicking();
-        }
+    private void picCards2_Click(object sender, EventArgs e)
+    {
+        cheakClick = 2;
+        clickCounter += 1;
+        clicking();
+    }
 
-        private void picCards4_Click(object sender, EventArgs e)
-        {
-            cheakClick = 4;
-            clickCounter += 1;
-            clicking();
-        }
+    private void picCards3_Click(object sender, EventArgs e)
+    {
+        cheakClick = 3;
+        clickCounter += 1;
+        clicking();
+    }
 
-        private void picCards5_Click(object sender, EventArgs e)
-        {
-            cheakClick = 5;
-            clickCounter += 1;
-            clicking();
-        }
+    private void picCards4_Click(object sender, EventArgs e)
+    {
+        cheakClick = 4;
+        clickCounter += 1;
+        clicking();
+    }
 
-        private void picCards6_Click(object sender, EventArgs e)
-        {
-            cheakClick = 6;
-            clickCounter += 1;
-            clicking();
-        }
+    private void picCards5_Click(object sender, EventArgs e)
+    {
+        cheakClick = 5;
+        clickCounter += 1;
+        clicking();
+    }
 
-        private void picCards7_Click(object sender, EventArgs e)
-        {
-            cheakClick = 7;
-            clickCounter += 1;
-            clicking();
-        }
+    private void picCards6_Click(object sender, EventArgs e)
+    {
+        cheakClick = 6;
+        clickCounter += 1;
+        clicking();
+    }
 
-        private void picCards8_Click(object sender, EventArgs e)
-        {
-            cheakClick = 8;
-            clickCounter += 1;
-            clicking();
-        }
+    private void picCards7_Click(object sender, EventArgs e)
+    {
+        cheakClick = 7;
+        clickCounter += 1;
+        clicking();
+    }
 
-        private void picCards9_Click(object sender, EventArgs e)
-        {
-            cheakClick = 9;
-            clickCounter += 1;
-            clicking();
-        }
+    private void picCards8_Click(object sender, EventArgs e)
+    {
+        cheakClick = 8;
+        clickCounter += 1;
+        clicking();
+    }
 
-        private void picCards10_Click(object sender, EventArgs e)
-        {
-            cheakClick = 10;
-            clickCounter += 1;
-            clicking();
-        }
+    private void picCards9_Click(object sender, EventArgs e)
+    {
+        cheakClick = 9;
+        clickCounter += 1;
+        clicking();
+    }
 
-        private void picCards11_Click(object sender, EventArgs e)
-        {
-            cheakClick = 11;
-            clickCounter += 1;
-            clicking();
-        }
+    private void picCards10_Click(object sender, EventArgs e)
+    {
+        cheakClick = 10;
+        clickCounter += 1;
+        clicking();
+    }
 
-        private void picCards12_Click(object sender, EventArgs e)
-        {
-            cheakClick = 12;
-            clickCounter += 1;
-            clicking();
-        }
+    private void picCards11_Click(object sender, EventArgs e)
+    {
+        cheakClick = 11;
+        clickCounter += 1;
+        clicking();
+    }
 
-        private void picCards13_Click(object sender, EventArgs e)
-        {
-            cheakClick = 13;
-            clickCounter += 1;
-            clicking();
-        }
+    private void picCards12_Click(object sender, EventArgs e)
+    {
+        cheakClick = 12;
+        clickCounter += 1;
+        clicking();
+    }
 
-        private void picCards14_Click(object sender, EventArgs e)
-        {
-            cheakClick = 14;
-            clickCounter += 1;
-            clicking();
-        }
+    private void picCards13_Click(object sender, EventArgs e)
+    {
+        cheakClick = 13;
+        clickCounter += 1;
+        clicking();
+    }
 
-        private void picCards15_Click(object sender, EventArgs e)
-        {
-            cheakClick = 15;
-            clickCounter += 1;
-            clicking();
-        }
+    private void picCards14_Click(object sender, EventArgs e)
+    {
+        cheakClick = 14;
+        clickCounter += 1;
+        clicking();
+    }
 
-        private void picCards16_Click(object sender, EventArgs e)
-        {
-            cheakClick = 16;
-            clickCounter += 1;
-            clicking();
-        }
+    private void picCards15_Click(object sender, EventArgs e)
+    {
+        cheakClick = 15;
+        clickCounter += 1;
+        clicking();
+    }
 
-        private void picCards17_Click(object sender, EventArgs e)
-        {
-            cheakClick = 17;
-            clickCounter += 1;
-            clicking();
-        }
+    private void picCards16_Click(object sender, EventArgs e)
+    {
+        cheakClick = 16;
+        clickCounter += 1;
+        clicking();
+    }
 
-        private void picCards18_Click(object sender, EventArgs e)
-        {
-            cheakClick = 18;
-            clickCounter += 1;
-            clicking();
-        }
+    private void picCards17_Click(object sender, EventArgs e)
+    {
+        cheakClick = 17;
+        clickCounter += 1;
+        clicking();
+    }
 
-        private void picCards19_Click(object sender, EventArgs e)
-        {
-            cheakClick = 19;
-            clickCounter += 1;
-            clicking();
-        }
+    private void picCards18_Click(object sender, EventArgs e)
+    {
+        cheakClick = 18;
+        clickCounter += 1;
+        clicking();
+    }
 
-        private void picCards20_Click(object sender, EventArgs e)
-        {
-            cheakClick = 20;
-            clickCounter += 1;
-            clicking();
-        }
+    private void picCards19_Click(object sender, EventArgs e)
+    {
+        cheakClick = 19;
+        clickCounter += 1;
+        clicking();
+    }
 
-        private void picCards21_Click(object sender, EventArgs e)
-        {
-            cheakClick = 21;
-            clickCounter += 1;
-            clicking();
-        }
+    private void picCards20_Click(object sender, EventArgs e)
+    {
+        cheakClick = 20;
+        clickCounter += 1;
+        clicking();
+    }
 
-        private void picCards22_Click(object sender, EventArgs e)
-        {
-            cheakClick = 22;
-            clickCounter += 1;
-            clicking();
-        }
+    private void picCards21_Click(object sender, EventArgs e)
+    {
+        cheakClick = 21;
+        clickCounter += 1;
+        clicking();
+    }
 
-        private void picCards23_Click(object sender, EventArgs e)
-        {
-            cheakClick = 23;
-            clickCounter += 1;
-            clicking();
-        }
+    private void picCards22_Click(object sender, EventArgs e)
+    {
+        cheakClick = 22;
+        clickCounter += 1;
+        clicking();
+    }
 
-        private void picCards24_Click(object sender, EventArgs e)
-        {
-            cheakClick = 24;
-            clickCounter += 1;
-            clicking();
-        }
+    private void picCards23_Click(object sender, EventArgs e)
+    {
+        cheakClick = 23;
+        clickCounter += 1;
+        clicking();
+    }
 
-        private void picCards25_Click(object sender, EventArgs e)
-        {
-            cheakClick = 25;
-            clickCounter += 1;
-            clicking();
-        }
+    private void picCards24_Click(object sender, EventArgs e)
+    {
+        cheakClick = 24;
+        clickCounter += 1;
+        clicking();
+    }
 
-        private void picCards26_Click(object sender, EventArgs e)
-        {
-            cheakClick = 26;
-            clickCounter += 1;
-            clicking();
-        }
+    private void picCards25_Click(object sender, EventArgs e)
+    {
+        cheakClick = 25;
+        clickCounter += 1;
+        clicking();
+    }
 
-        private void picCards27_Click(object sender, EventArgs e)
-        {
-            cheakClick = 27;
-            clickCounter += 1;
-            clicking();
-        }
+    private void picCards26_Click(object sender, EventArgs e)
+    {
+        cheakClick = 26;
+        clickCounter += 1;
+        clicking();
+    }
 
-        private void picCards28_Click(object sender, EventArgs e)
-        {
-            cheakClick = 28;
-            clickCounter += 1;
-            clicking();
-        }
+    private void picCards27_Click(object sender, EventArgs e)
+    {
+        cheakClick = 27;
+        clickCounter += 1;
+        clicking();
+    }
 
-        private void picCards29_Click(object sender, EventArgs e)
-        {
-            cheakClick = 29;
-            clickCounter += 1;
-            clicking();
-        }
+    private void picCards28_Click(object sender, EventArgs e)
+    {
+        cheakClick = 28;
+        clickCounter += 1;
+        clicking();
+    }
 
-        private void picCards30_Click(object sender, EventArgs e)
-        {
-            cheakClick = 30;
-            clickCounter += 1;
-            clicking();
-        }
+    private void picCards29_Click(object sender, EventArgs e)
+    {
+        cheakClick = 29;
+        clickCounter += 1;
+        clicking();
+    }
 
-        private void picCards31_Click(object sender, EventArgs e)
-        {
-            cheakClick = 31;
-            clickCounter += 1;
-            clicking();
-        }
+    private void picCards30_Click(object sender, EventArgs e)
+    {
+        cheakClick = 30;
+        clickCounter += 1;
+        clicking();
+    }
 
-        private void picCards32_Click(object sender, EventArgs e)
-        {
-            cheakClick = 32;
-            clickCounter += 1;
-            clicking();
-        }
+    private void picCards31_Click(object sender, EventArgs e)
+    {
+        cheakClick = 31;
+        clickCounter += 1;
+        clicking();
+    }
+
+    private void picCards32_Click(object sender, EventArgs e)
+    {
+        cheakClick = 32;
+        clickCounter += 1;
+        clicking();
+    }
+
         #endregion
 
+    #region 检查
+        private void picCards1_MouseLeave(object sender, EventArgs e)
+        {
+            if (covering)
+            {
+                coverUP();
+                covering = false;
+            }
+        }
 
+        private void picCards2_MouseLeave(object sender, EventArgs e)
+        {
+            if (covering)
+            {
+                coverUP();
+                covering = false;
+            }
+        }
+
+        private void picCards3_MouseLeave(object sender, EventArgs e)
+        {
+            if (covering)
+            {
+                coverUP();
+                covering = false;
+            }
+        }
+
+        private void picCards4_MouseLeave(object sender, EventArgs e)
+        {
+            if (covering)
+            {
+                coverUP();
+                covering = false;
+            }
+        }
+
+        private void picCards5_MouseLeave(object sender, EventArgs e)
+        {
+            if (covering)
+            {
+                coverUP();
+                covering = false;
+            }
+        }
+
+        private void picCards6_MouseLeave(object sender, EventArgs e)
+        {
+            if (covering)
+            {
+                coverUP();
+                covering = false;
+            }
+        }
+
+        private void picCards7_MouseLeave(object sender, EventArgs e)
+        {
+            if (covering)
+            {
+                coverUP();
+                covering = false;
+            }
+        }
+
+        private void picCards8_MouseLeave(object sender, EventArgs e)
+        {
+            if (covering)
+            {
+                coverUP();
+                covering = false;
+            }
+        }
+
+        private void picCards9_MouseLeave(object sender, EventArgs e)
+        {
+            if (covering)
+            {
+                coverUP();
+                covering = false;
+            }
+        }
+
+        private void picCards10_MouseLeave(object sender, EventArgs e)
+        {
+            if (covering)
+            {
+                coverUP();
+                covering = false;
+            }
+        }
+
+        private void picCards11_MouseLeave(object sender, EventArgs e)
+        {
+            if (covering)
+            {
+                coverUP();
+                covering = false;
+            }
+        }
+
+        private void picCards12_MouseLeave(object sender, EventArgs e)
+        {
+            if (covering)
+            {
+                coverUP();
+                covering = false;
+            }
+        }
+
+        private void picCards13_MouseLeave(object sender, EventArgs e)
+        {
+            if (covering)
+            {
+                coverUP();
+                covering = false;
+            }
+        }
+
+        private void picCards14_MouseLeave(object sender, EventArgs e)
+        {
+            if (covering)
+            {
+                coverUP();
+                covering = false;
+            }
+        }
+
+        private void picCards15_MouseLeave(object sender, EventArgs e)
+        {
+            if (covering)
+            {
+                coverUP();
+                covering = false;
+            }
+        }
+
+        private void picCards16_MouseLeave(object sender, EventArgs e)
+        {
+            if (covering)
+            {
+                coverUP();
+                covering = false;
+            }
+        }
+
+        private void picCards17_MouseLeave(object sender, EventArgs e)
+        {
+            if (covering)
+            {
+                coverUP();
+                covering = false;
+            }
+        }
+
+        private void picCards18_MouseLeave(object sender, EventArgs e)
+        {
+            if (covering)
+            {
+                coverUP();
+                covering = false;
+            }
+        }
+
+        private void picCards19_MouseLeave(object sender, EventArgs e)
+        {
+            if (covering)
+            {
+                coverUP();
+                covering = false;
+            }
+        }
+
+        private void picCards20_MouseLeave(object sender, EventArgs e)
+        {
+            if (covering)
+            {
+                coverUP();
+                covering = false;
+            }
+        }
+
+        private void picCards21_MouseLeave(object sender, EventArgs e)
+        {
+            if (covering)
+            {
+                coverUP();
+                covering = false;
+            }
+        }
+
+        private void picCards22_MouseLeave(object sender, EventArgs e)
+        {
+            if (covering)
+            {
+                coverUP();
+                covering = false;
+            }
+        }
+
+        private void picCards23_MouseLeave(object sender, EventArgs e)
+        {
+            if (covering)
+            {
+                coverUP();
+                covering = false;
+            }
+        }
+
+        private void picCards24_MouseLeave(object sender, EventArgs e)
+        {
+            if (covering)
+            {
+                coverUP();
+                covering = false;
+            }
+        }
+
+        private void picCards25_MouseLeave(object sender, EventArgs e)
+        {
+            if (covering)
+            {
+                coverUP();
+                covering = false;
+            }
+        }
+
+        private void picCards26_MouseLeave(object sender, EventArgs e)
+        {
+            if (covering)
+            {
+                coverUP();
+                covering = false;
+            }
+        }
+
+        private void picCards27_MouseLeave(object sender, EventArgs e)
+        {
+            if (covering)
+            {
+                coverUP();
+                covering = false;
+            }
+        }
+
+        private void picCards28_MouseLeave(object sender, EventArgs e)
+        {
+            if (covering)
+            {
+                coverUP();
+                covering = false;
+            }
+        }
+
+        private void picCards29_MouseLeave(object sender, EventArgs e)
+        {
+            if (covering)
+            {
+                coverUP();
+                covering = false;
+            }
+        }
+
+        private void picCards30_MouseLeave(object sender, EventArgs e)
+        {
+            if (covering)
+            {
+                coverUP();
+                covering = false;
+            }
+        }
+
+        private void picCards31_MouseLeave(object sender, EventArgs e)
+        {
+            if (covering)
+            {
+                coverUP();
+                covering = false;
+            }
+        }
+
+        private void picCards32_MouseLeave(object sender, EventArgs e)
+        {
+            if (covering)
+            {
+                coverUP();
+                covering = false;
+            }
+        }
+        #endregion
     }
 }
