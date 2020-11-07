@@ -102,11 +102,11 @@
             // btnGo
             // 
             this.btnGo.Font = new System.Drawing.Font("新細明體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnGo.Location = new System.Drawing.Point(1629, 5);
+            this.btnGo.Location = new System.Drawing.Point(1623, 5);
             this.btnGo.Name = "btnGo";
-            this.btnGo.Size = new System.Drawing.Size(89, 30);
+            this.btnGo.Size = new System.Drawing.Size(95, 30);
             this.btnGo.TabIndex = 0;
-            this.btnGo.Text = "重置";
+            this.btnGo.Text = "重置图片";
             this.btnGo.UseVisualStyleBackColor = true;
             this.btnGo.Click += new System.EventHandler(this.btnGo_Click);
             // 
@@ -513,7 +513,7 @@
             this.Controls.Add(this.picCards1);
             this.Controls.Add(this.btnGo);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "配对";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picCards1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCards2)).EndInit();
