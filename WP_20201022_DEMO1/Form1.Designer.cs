@@ -552,6 +552,7 @@ namespace WP_20201022_DEMO1
             this.Name = "Form1";
             this.Text = "配对";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.Shown += new System.EventHandler(this.Form1_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.picCards1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCards2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCards3)).EndInit();

@@ -34,6 +34,8 @@ namespace WP_20201022_DEMO1
             cB_diff.Items.Add("困难");
             cB_diff.SelectedIndex = 0;
         }
+
+        #region 生命周期
         private void Form1_Load(object sender, EventArgs e)
         {
             #region 加入图片
@@ -80,6 +82,13 @@ namespace WP_20201022_DEMO1
             }
         }
 
+        private void Form1_Shown(object sender, EventArgs e)
+        {
+            MessageBox.Show("目前难度为" + cB_diff.Text + "，如果需要变更请选择难度，然后按新游戏", "注意", MessageBoxButtons.OK);
+        }
+        #endregion
+
+        #region 按钮
         /// <summary>
         /// 重新打乱一次
         /// </summary>
@@ -144,7 +153,9 @@ namespace WP_20201022_DEMO1
                 }
             }
         }
+        #endregion
 
+        #region 逻辑判断
         /// <summary>
         /// 当图片被按下
         /// </summary>
@@ -375,6 +386,7 @@ namespace WP_20201022_DEMO1
                     break;
             }
         }
+        #endregion
 
         #region 翻到卡背
         /// <summary>
@@ -1442,5 +1454,6 @@ namespace WP_20201022_DEMO1
         }
 
         #endregion
+
     }
 }
