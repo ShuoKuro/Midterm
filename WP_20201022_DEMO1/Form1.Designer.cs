@@ -1,4 +1,4 @@
-﻿namespace WP_20201022_DEMO1
+namespace WP_20201022_DEMO1
 {
     partial class Form1
     {
@@ -65,6 +65,8 @@
             this.wrong = new System.Windows.Forms.Label();
             this.labCorrect = new System.Windows.Forms.Label();
             this.labWrong = new System.Windows.Forms.Label();
+            this.cB_diff = new System.Windows.Forms.ComboBox();
+            this.difficulty = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picCards1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCards2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCards3)).BeginInit();
@@ -434,7 +436,7 @@
             // 
             this.correct.AutoSize = true;
             this.correct.Font = new System.Drawing.Font("新細明體", 20F);
-            this.correct.Location = new System.Drawing.Point(19, 11);
+            this.correct.Location = new System.Drawing.Point(19, 6);
             this.correct.Name = "correct";
             this.correct.Size = new System.Drawing.Size(93, 27);
             this.correct.TabIndex = 33;
@@ -444,7 +446,7 @@
             // 
             this.wrong.AutoSize = true;
             this.wrong.Font = new System.Drawing.Font("新細明體", 20F);
-            this.wrong.Location = new System.Drawing.Point(169, 9);
+            this.wrong.Location = new System.Drawing.Point(232, 6);
             this.wrong.Name = "wrong";
             this.wrong.Size = new System.Drawing.Size(93, 27);
             this.wrong.TabIndex = 34;
@@ -454,7 +456,7 @@
             // 
             this.labCorrect.AutoSize = true;
             this.labCorrect.Font = new System.Drawing.Font("新細明體", 20F);
-            this.labCorrect.Location = new System.Drawing.Point(118, 9);
+            this.labCorrect.Location = new System.Drawing.Point(118, 6);
             this.labCorrect.Name = "labCorrect";
             this.labCorrect.Size = new System.Drawing.Size(25, 27);
             this.labCorrect.TabIndex = 35;
@@ -464,17 +466,39 @@
             // 
             this.labWrong.AutoSize = true;
             this.labWrong.Font = new System.Drawing.Font("新細明體", 20F);
-            this.labWrong.Location = new System.Drawing.Point(268, 9);
+            this.labWrong.Location = new System.Drawing.Point(331, 6);
             this.labWrong.Name = "labWrong";
             this.labWrong.Size = new System.Drawing.Size(25, 27);
             this.labWrong.TabIndex = 36;
             this.labWrong.Text = "0";
+            // 
+            // cB_diff
+            // 
+            this.cB_diff.Font = new System.Drawing.Font("新細明體", 20F);
+            this.cB_diff.FormattingEnabled = true;
+            this.cB_diff.IntegralHeight = false;
+            this.cB_diff.Location = new System.Drawing.Point(534, 2);
+            this.cB_diff.Name = "cB_diff";
+            this.cB_diff.Size = new System.Drawing.Size(98, 35);
+            this.cB_diff.TabIndex = 37;
+            // 
+            // difficulty
+            // 
+            this.difficulty.AutoSize = true;
+            this.difficulty.Font = new System.Drawing.Font("新細明體", 20F);
+            this.difficulty.Location = new System.Drawing.Point(435, 6);
+            this.difficulty.Name = "difficulty";
+            this.difficulty.Size = new System.Drawing.Size(93, 27);
+            this.difficulty.TabIndex = 38;
+            this.difficulty.Text = "难度：";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1743, 898);
+            this.Controls.Add(this.difficulty);
+            this.Controls.Add(this.cB_diff);
             this.Controls.Add(this.labWrong);
             this.Controls.Add(this.labCorrect);
             this.Controls.Add(this.wrong);
@@ -591,6 +615,8 @@
         private System.Windows.Forms.Label wrong;
         private System.Windows.Forms.Label labCorrect;
         private System.Windows.Forms.Label labWrong;
+        private System.Windows.Forms.ComboBox cB_diff;
+        private System.Windows.Forms.Label difficulty;
     }
 }
 
