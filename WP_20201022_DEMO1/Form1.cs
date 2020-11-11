@@ -24,7 +24,7 @@ namespace WP_20201022_DEMO1
         int showIndex;
         int lastClick;
         int clickCounter;
-        bool covering;
+        bool coverIt;
 
 
         public Form1()
@@ -506,7 +506,7 @@ namespace WP_20201022_DEMO1
                     {
                         countWrong += 1;
                         labWrong.Text = countWrong + "";
-                        covering = true;
+                        coverIt = true;
                     }
                     break;
             }
@@ -869,289 +869,289 @@ namespace WP_20201022_DEMO1
         #region 检查
         private void picCards1_MouseLeave(object sender, EventArgs e)
         {
-            if (covering)
+            if (coverIt)
             {
                 coverUP();
-                covering = false;
+                coverIt = false;
             }
         }
 
         private void picCards2_MouseLeave(object sender, EventArgs e)
         {
-            if (covering)
+            if (coverIt)
             {
                 coverUP();
-                covering = false;
+                coverIt = false;
             }
         }
 
         private void picCards3_MouseLeave(object sender, EventArgs e)
         {
-            if (covering)
+            if (coverIt)
             {
                 coverUP();
-                covering = false;
+                coverIt = false;
             }
         }
 
         private void picCards4_MouseLeave(object sender, EventArgs e)
         {
-            if (covering)
+            if (coverIt)
             {
                 coverUP();
-                covering = false;
+                coverIt = false;
             }
         }
 
         private void picCards5_MouseLeave(object sender, EventArgs e)
         {
-            if (covering)
+            if (coverIt)
             {
                 coverUP();
-                covering = false;
+                coverIt = false;
             }
         }
 
         private void picCards6_MouseLeave(object sender, EventArgs e)
         {
-            if (covering)
+            if (coverIt)
             {
                 coverUP();
-                covering = false;
+                coverIt = false;
             }
         }
 
         private void picCards7_MouseLeave(object sender, EventArgs e)
         {
-            if (covering)
+            if (coverIt)
             {
                 coverUP();
-                covering = false;
+                coverIt = false;
             }
         }
 
         private void picCards8_MouseLeave(object sender, EventArgs e)
         {
-            if (covering)
+            if (coverIt)
             {
                 coverUP();
-                covering = false;
+                coverIt = false;
             }
         }
 
         private void picCards9_MouseLeave(object sender, EventArgs e)
         {
-            if (covering)
+            if (coverIt)
             {
                 coverUP();
-                covering = false;
+                coverIt = false;
             }
         }
 
         private void picCards10_MouseLeave(object sender, EventArgs e)
         {
-            if (covering)
+            if (coverIt)
             {
                 coverUP();
-                covering = false;
+                coverIt = false;
             }
         }
 
         private void picCards11_MouseLeave(object sender, EventArgs e)
         {
-            if (covering)
+            if (coverIt)
             {
                 coverUP();
-                covering = false;
+                coverIt = false;
             }
         }
 
         private void picCards12_MouseLeave(object sender, EventArgs e)
         {
-            if (covering)
+            if (coverIt)
             {
                 coverUP();
-                covering = false;
+                coverIt = false;
             }
         }
 
         private void picCards13_MouseLeave(object sender, EventArgs e)
         {
-            if (covering)
+            if (coverIt)
             {
                 coverUP();
-                covering = false;
+                coverIt = false;
             }
         }
 
         private void picCards14_MouseLeave(object sender, EventArgs e)
         {
-            if (covering)
+            if (coverIt)
             {
                 coverUP();
-                covering = false;
+                coverIt = false;
             }
         }
 
         private void picCards15_MouseLeave(object sender, EventArgs e)
         {
-            if (covering)
+            if (coverIt)
             {
                 coverUP();
-                covering = false;
+                coverIt = false;
             }
         }
 
         private void picCards16_MouseLeave(object sender, EventArgs e)
         {
-            if (covering)
+            if (coverIt)
             {
                 coverUP();
-                covering = false;
+                coverIt = false;
             }
         }
 
         private void picCards17_MouseLeave(object sender, EventArgs e)
         {
-            if (covering)
+            if (coverIt)
             {
                 coverUP();
-                covering = false;
+                coverIt = false;
             }
         }
 
         private void picCards18_MouseLeave(object sender, EventArgs e)
         {
-            if (covering)
+            if (coverIt)
             {
                 coverUP();
-                covering = false;
+                coverIt = false;
             }
         }
 
         private void picCards19_MouseLeave(object sender, EventArgs e)
         {
-            if (covering)
+            if (coverIt)
             {
                 coverUP();
-                covering = false;
+                coverIt = false;
             }
         }
 
         private void picCards20_MouseLeave(object sender, EventArgs e)
         {
-            if (covering)
+            if (coverIt)
             {
                 coverUP();
-                covering = false;
+                coverIt = false;
             }
         }
 
         private void picCards21_MouseLeave(object sender, EventArgs e)
         {
-            if (covering)
+            if (coverIt)
             {
                 coverUP();
-                covering = false;
+                coverIt = false;
             }
         }
 
         private void picCards22_MouseLeave(object sender, EventArgs e)
         {
-            if (covering)
+            if (coverIt)
             {
                 coverUP();
-                covering = false;
+                coverIt = false;
             }
         }
 
         private void picCards23_MouseLeave(object sender, EventArgs e)
         {
-            if (covering)
+            if (coverIt)
             {
                 coverUP();
-                covering = false;
+                coverIt = false;
             }
         }
 
         private void picCards24_MouseLeave(object sender, EventArgs e)
         {
-            if (covering)
+            if (coverIt)
             {
                 coverUP();
-                covering = false;
+                coverIt = false;
             }
         }
 
         private void picCards25_MouseLeave(object sender, EventArgs e)
         {
-            if (covering)
+            if (coverIt)
             {
                 coverUP();
-                covering = false;
+                coverIt = false;
             }
         }
 
         private void picCards26_MouseLeave(object sender, EventArgs e)
         {
-            if (covering)
+            if (coverIt)
             {
                 coverUP();
-                covering = false;
+                coverIt = false;
             }
         }
 
         private void picCards27_MouseLeave(object sender, EventArgs e)
         {
-            if (covering)
+            if (coverIt)
             {
                 coverUP();
-                covering = false;
+                coverIt = false;
             }
         }
 
         private void picCards28_MouseLeave(object sender, EventArgs e)
         {
-            if (covering)
+            if (coverIt)
             {
                 coverUP();
-                covering = false;
+                coverIt = false;
             }
         }
 
         private void picCards29_MouseLeave(object sender, EventArgs e)
         {
-            if (covering)
+            if (coverIt)
             {
                 coverUP();
-                covering = false;
+                coverIt = false;
             }
         }
 
         private void picCards30_MouseLeave(object sender, EventArgs e)
         {
-            if (covering)
+            if (coverIt)
             {
                 coverUP();
-                covering = false;
+                coverIt = false;
             }
         }
 
         private void picCards31_MouseLeave(object sender, EventArgs e)
         {
-            if (covering)
+            if (coverIt)
             {
                 coverUP();
-                covering = false;
+                coverIt = false;
             }
         }
 
         private void picCards32_MouseLeave(object sender, EventArgs e)
         {
-            if (covering)
+            if (coverIt)
             {
                 coverUP();
-                covering = false;
+                coverIt = false;
             }
         }
         #endregion
