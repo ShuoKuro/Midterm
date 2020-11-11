@@ -32,8 +32,7 @@ namespace WP_20201022_DEMO1
             cB_diff.Items.Add("简单");
             cB_diff.Items.Add("普通");
             cB_diff.Items.Add("困难");
-            cB_diff.SelectedIndex = 1;
-
+            cB_diff.SelectedIndex = 0;
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -56,6 +55,14 @@ namespace WP_20201022_DEMO1
             imagelist.Add(Resources._015);
             imagelist.Add(Resources._016);
             #endregion
+
+            //预设值
+            index = 9999;
+            lastIndex = 8888;
+            countCorrect = 0;
+            countWrong = 0;
+            clickCounter = 0;
+
 
             if (cB_diff.Text == "简单")
             {
@@ -80,11 +87,11 @@ namespace WP_20201022_DEMO1
         /// <param name="e"></param>
         private void btnGo_Click(object sender, EventArgs e)
         {
-            if(cB_diff.Text == "简单")
+            if (cB_diff.Text == "简单")
             {
                 coverUPAll_esay();
             }
-            if(cB_diff.Text == "普通")
+            if (cB_diff.Text == "普通")
             {
                 coverUPAll_normal();
             }
@@ -103,104 +110,39 @@ namespace WP_20201022_DEMO1
         }
 
         /// <summary>
-        /// 在简单模式所有翻到卡背
+        ///开启新游戏
         /// </summary>
-        private void coverUPAll_esay()
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btn_newGame_Click(object sender, EventArgs e)
         {
-            picCards1.Image = imagelist[0];
-            picCards2.Image = imagelist[0];
-            picCards3.Image = imagelist[0];
-            picCards4.Image = imagelist[0];
-            picCards5.Image = imagelist[0];
-            picCards6.Image = imagelist[0];
-            picCards7.Image = imagelist[0];
-            picCards8.Image = imagelist[0];
-            picCards9.Image = imagelist[0];
-            picCards10.Image = imagelist[0];
-            picCards11.Image = imagelist[0];
-            picCards12.Image = imagelist[0];
-        }
+            string message = "你是否以 " + cB_diff.Text + " 难度开启新游戏";
+            string caption = "警告";
+            DialogResult result;
+            result = MessageBox.Show(message, caption, MessageBoxButtons.YesNo);
 
+            if (result == System.Windows.Forms.DialogResult.Yes)
+            {
+                countCorrect = 0;
+                countWrong = 0;
+                labCorrect.Text = countCorrect + "";
+                labWrong.Text = countWrong + "";
 
-        /// <summary>
-        /// 在普通模式所有翻到卡背
-        /// </summary>
-        private void coverUPAll_normal()
-        {
-            picCards1.Image = imagelist[0];
-            picCards2.Image = imagelist[0];
-            picCards3.Image = imagelist[0];
-            picCards4.Image = imagelist[0];
-            picCards5.Image = imagelist[0];
-            picCards6.Image = imagelist[0];
-            picCards7.Image = imagelist[0];
-            picCards8.Image = imagelist[0];
-            picCards9.Image = imagelist[0];
-            picCards10.Image = imagelist[0];
-            picCards11.Image = imagelist[0];
-            picCards12.Image = imagelist[0];
-            picCards13.Image = imagelist[0];
-            picCards14.Image = imagelist[0];
-            picCards15.Image = imagelist[0];
-            picCards16.Image = imagelist[0];
-            picCards17.Image = imagelist[0];
-            picCards18.Image = imagelist[0];
-            picCards19.Image = imagelist[0];
-            picCards20.Image = imagelist[0];
-            picCards21.Image = imagelist[0];
-            picCards22.Image = imagelist[0];
-            picCards23.Image = imagelist[0];
-            picCards24.Image = imagelist[0];
-        }
+                if (cB_diff.Text == "简单")
+                {
+                    esayMode();
+                }
 
-        /// <summary>
-        /// 在困难模式所有翻到卡背
-        /// </summary>
-        private void coverUPAll_hard()
-        {
-            picCards1.Image = imagelist[0];
-            picCards2.Image = imagelist[0];
-            picCards3.Image = imagelist[0];
-            picCards4.Image = imagelist[0];
-            picCards5.Image = imagelist[0];
-            picCards6.Image = imagelist[0];
-            picCards7.Image = imagelist[0];
-            picCards8.Image = imagelist[0];
-            picCards9.Image = imagelist[0];
-            picCards10.Image = imagelist[0];
-            picCards11.Image = imagelist[0];
-            picCards12.Image = imagelist[0];
-            picCards13.Image = imagelist[0];
-            picCards14.Image = imagelist[0];
-            picCards15.Image = imagelist[0];
-            picCards16.Image = imagelist[0];
-            picCards17.Image = imagelist[0];
-            picCards18.Image = imagelist[0];
-            picCards19.Image = imagelist[0];
-            picCards20.Image = imagelist[0];
-            picCards21.Image = imagelist[0];
-            picCards22.Image = imagelist[0];
-            picCards23.Image = imagelist[0];
-            picCards24.Image = imagelist[0];
-            picCards25.Image = imagelist[0];
-            picCards26.Image = imagelist[0];
-            picCards27.Image = imagelist[0];
-            picCards28.Image = imagelist[0];
-            picCards29.Image = imagelist[0];
-            picCards30.Image = imagelist[0];
-            picCards31.Image = imagelist[0];
-            picCards32.Image = imagelist[0];
-        }
+                if (cB_diff.Text == "普通")
+                {
+                    normalMode();
+                }
 
-        /// <summary>
-        /// 把现在这一张和上一张翻到卡背
-        /// </summary>
-        private void coverUP()
-        {
-            coverlist();
-            cheakClick = lastClick;
-            coverlist();
-            clickCounter = 0;
+                if (cB_diff.Text == "困难")
+                {
+                    hardMode();
+                }
+            }
         }
 
         /// <summary>
@@ -405,6 +347,137 @@ namespace WP_20201022_DEMO1
         }
 
         /// <summary>
+        /// 检查正确还是错误
+        /// </summary>
+        private void cheak()
+        {
+            switch (clickCounter)
+            {
+                case 1:
+                    lastClick = cheakClick;
+                    showIndex = index; //显示a
+                    lastIndex = index; //记下上一次按的什么
+                    break;
+                case 2:
+                    showIndex = index;
+                    clickCounter = 0;
+                    if (index == lastIndex)
+                    {
+                        countCorrect += 1;
+                        labCorrect.Text = countCorrect + "";
+                    }
+                    if (index != lastIndex)
+                    {
+                        countWrong += 1;
+                        labWrong.Text = countWrong + "";
+                        coverIt = true;
+                    }
+                    break;
+            }
+        }
+
+        #region 翻到卡背
+        /// <summary>
+        /// 在简单模式所有翻到卡背
+        /// </summary>
+        private void coverUPAll_esay()
+        {
+            picCards1.Image = imagelist[0];
+            picCards2.Image = imagelist[0];
+            picCards3.Image = imagelist[0];
+            picCards4.Image = imagelist[0];
+            picCards5.Image = imagelist[0];
+            picCards6.Image = imagelist[0];
+            picCards7.Image = imagelist[0];
+            picCards8.Image = imagelist[0];
+            picCards9.Image = imagelist[0];
+            picCards10.Image = imagelist[0];
+            picCards11.Image = imagelist[0];
+            picCards12.Image = imagelist[0];
+        }
+
+        /// <summary>
+        /// 在普通模式所有翻到卡背
+        /// </summary>
+        private void coverUPAll_normal()
+        {
+            picCards1.Image = imagelist[0];
+            picCards2.Image = imagelist[0];
+            picCards3.Image = imagelist[0];
+            picCards4.Image = imagelist[0];
+            picCards5.Image = imagelist[0];
+            picCards6.Image = imagelist[0];
+            picCards7.Image = imagelist[0];
+            picCards8.Image = imagelist[0];
+            picCards9.Image = imagelist[0];
+            picCards10.Image = imagelist[0];
+            picCards11.Image = imagelist[0];
+            picCards12.Image = imagelist[0];
+            picCards13.Image = imagelist[0];
+            picCards14.Image = imagelist[0];
+            picCards15.Image = imagelist[0];
+            picCards16.Image = imagelist[0];
+            picCards17.Image = imagelist[0];
+            picCards18.Image = imagelist[0];
+            picCards19.Image = imagelist[0];
+            picCards20.Image = imagelist[0];
+            picCards21.Image = imagelist[0];
+            picCards22.Image = imagelist[0];
+            picCards23.Image = imagelist[0];
+            picCards24.Image = imagelist[0];
+        }
+
+        /// <summary>
+        /// 在困难模式所有翻到卡背
+        /// </summary>
+        private void coverUPAll_hard()
+        {
+            picCards1.Image = imagelist[0];
+            picCards2.Image = imagelist[0];
+            picCards3.Image = imagelist[0];
+            picCards4.Image = imagelist[0];
+            picCards5.Image = imagelist[0];
+            picCards6.Image = imagelist[0];
+            picCards7.Image = imagelist[0];
+            picCards8.Image = imagelist[0];
+            picCards9.Image = imagelist[0];
+            picCards10.Image = imagelist[0];
+            picCards11.Image = imagelist[0];
+            picCards12.Image = imagelist[0];
+            picCards13.Image = imagelist[0];
+            picCards14.Image = imagelist[0];
+            picCards15.Image = imagelist[0];
+            picCards16.Image = imagelist[0];
+            picCards17.Image = imagelist[0];
+            picCards18.Image = imagelist[0];
+            picCards19.Image = imagelist[0];
+            picCards20.Image = imagelist[0];
+            picCards21.Image = imagelist[0];
+            picCards22.Image = imagelist[0];
+            picCards23.Image = imagelist[0];
+            picCards24.Image = imagelist[0];
+            picCards25.Image = imagelist[0];
+            picCards26.Image = imagelist[0];
+            picCards27.Image = imagelist[0];
+            picCards28.Image = imagelist[0];
+            picCards29.Image = imagelist[0];
+            picCards30.Image = imagelist[0];
+            picCards31.Image = imagelist[0];
+            picCards32.Image = imagelist[0];
+        }
+
+        /// <summary>
+        /// 把现在这一张和上一张翻到卡背
+        /// </summary>
+        private void coverUP()
+        {
+            coverlist();
+            cheakClick = lastClick;
+            coverlist();
+            clickCounter = 0;
+        }
+
+        /// <summary>
         /// 使某个图片需要翻到卡背
         /// </summary>
         private void coverlist()
@@ -540,42 +613,21 @@ namespace WP_20201022_DEMO1
                     break;
             }
         }
+        #endregion
 
-        /// <summary>
-        /// 检查正确还是错误
-        /// </summary>
-        private void cheak()
-        {
-            switch (clickCounter)
-            {
-                case 1:
-                    lastClick = cheakClick;
-                    showIndex = index; //显示a
-                    lastIndex = index; //记下上一次按的什么
-                    break;
-                case 2:
-                    showIndex = index;
-                    clickCounter = 0;
-                    if (index == lastIndex)
-                    {
-                        countCorrect += 1;
-                        labCorrect.Text = countCorrect + "";
-                    }
-                    if (index != lastIndex)
-                    {
-                        countWrong += 1;
-                        labWrong.Text = countWrong + "";
-                        coverIt = true;
-                    }
-                    break;
-            }
-        }
-
+        #region 模式
 
         private void esayMode()
         {
             #region 调整版面
             btnGo.Location = new Point(753, 5);
+            btn_newGame.Location = new Point(616, 5);
+
+            picCards1.Location = new Point(12, 41);
+            picCards2.Location = new Point(226, 41);
+            picCards3.Location = new Point(440, 41);
+            picCards4.Location = new Point(654, 41);
+
             picCards5.Location = new Point(12, 255);
             picCards6.Location = new Point(226, 255);
             picCards7.Location = new Point(440, 255);
@@ -600,21 +652,14 @@ namespace WP_20201022_DEMO1
             //把卡背显示在每个picbox上
             coverUPAll_esay();
 
-            //预设值
-            index = 9999;
-            lastIndex = 8888;
-            countCorrect = 0;
-            countWrong = 0;
-            clickCounter = 0;
-
             //打乱
-            poker = p.GetPoker(12);
+            poker = p.GetPoker(20);
             for (int i = 0; i < poker.Count; i++)
             {
                 //制造重复的值
-                if (poker[i] >= 6)
+                if (poker[i] >= 10)
                 {
-                    poker[i] -= 6;
+                    poker[i] -= 10;
                 }
             }
             #endregion
@@ -624,6 +669,15 @@ namespace WP_20201022_DEMO1
         {
             #region 调整版面
             btnGo.Location = new Point(1175, 5);
+            btn_newGame.Location = new Point(1038, 5);
+
+            picCards1.Location = new Point(12, 41);
+            picCards2.Location = new Point(226, 41);
+            picCards3.Location = new Point(440, 41);
+            picCards4.Location = new Point(654, 41);
+            picCards5.Location = new Point(868, 41);
+            picCards6.Location = new Point(1082, 41);
+
 
             picCards7.Location = new Point(12, 255);
             picCards8.Location = new Point(226, 255);
@@ -666,13 +720,6 @@ namespace WP_20201022_DEMO1
             //把卡背显示在每个picbox上
             coverUPAll_normal();
 
-            //预设值
-            index = 9999;
-            lastIndex = 8888;
-            countCorrect = 0;
-            countWrong = 0;
-            clickCounter = 0;
-
             //打乱
             poker = p.GetPoker(24);
             for (int i = 0; i < poker.Count; i++)
@@ -689,6 +736,45 @@ namespace WP_20201022_DEMO1
         private void hardMode()
         {
             #region 调整版面
+            btnGo.Location = new Point(1623, 5);
+            btn_newGame.Location = new Point(1486, 5);
+
+            picCards1.Location = new Point(12, 41);
+            picCards2.Location = new Point(226, 41);
+            picCards3.Location = new Point(440, 41);
+            picCards4.Location = new Point(654, 41);
+            picCards5.Location = new Point(868, 41);
+            picCards6.Location = new Point(1082, 41);
+            picCards7.Location = new Point(1296, 41);
+            picCards8.Location = new Point(1510, 41);
+
+            picCards9.Location = new Point(12, 255);
+            picCards10.Location = new Point(226, 255);
+            picCards11.Location = new Point(440, 255);
+            picCards12.Location = new Point(654, 255);
+            picCards13.Location = new Point(868, 255);
+            picCards14.Location = new Point(1082, 255);
+            picCards15.Location = new Point(1296, 255);
+            picCards16.Location = new Point(1510, 255);
+
+            picCards17.Location = new Point(12, 469);
+            picCards18.Location = new Point(226, 469);
+            picCards19.Location = new Point(440, 469);
+            picCards20.Location = new Point(654, 469);
+            picCards21.Location = new Point(868, 469);
+            picCards22.Location = new Point(1082, 469);
+            picCards23.Location = new Point(1296, 469);
+            picCards24.Location = new Point(1510, 469);
+
+            picCards25.Location = new Point(12, 683);
+            picCards26.Location = new Point(226, 683);
+            picCards27.Location = new Point(440, 683);
+            picCards28.Location = new Point(654, 683);
+            picCards29.Location = new Point(868, 683);
+            picCards30.Location = new Point(1082, 683);
+            picCards31.Location = new Point(1296, 683);
+            picCards32.Location = new Point(1510, 683);
+
             this.Width = 1760;
             this.Height = 940;
             #endregion
@@ -696,13 +782,6 @@ namespace WP_20201022_DEMO1
             #region 设定图片
             //把卡背显示在每个picbox上
             coverUPAll_hard();
-
-            //预设值
-            index = 9999;
-            lastIndex = 8888;
-            countCorrect = 0;
-            countWrong = 0;
-            clickCounter = 0;
 
             //打乱
             poker = p.GetPoker(32);
@@ -717,6 +796,7 @@ namespace WP_20201022_DEMO1
             #endregion
         }
 
+        #endregion
 
         #region 按下pic
         private void picCards1_Click(object sender, EventArgs e)

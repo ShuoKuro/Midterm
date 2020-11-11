@@ -67,6 +67,7 @@ namespace WP_20201022_DEMO1
             this.labWrong = new System.Windows.Forms.Label();
             this.cB_diff = new System.Windows.Forms.ComboBox();
             this.difficulty = new System.Windows.Forms.Label();
+            this.btn_newGame = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picCards1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCards2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCards3)).BeginInit();
@@ -446,7 +447,7 @@ namespace WP_20201022_DEMO1
             // 
             this.wrong.AutoSize = true;
             this.wrong.Font = new System.Drawing.Font("新細明體", 20F);
-            this.wrong.Location = new System.Drawing.Point(232, 6);
+            this.wrong.Location = new System.Drawing.Point(159, 6);
             this.wrong.Name = "wrong";
             this.wrong.Size = new System.Drawing.Size(93, 27);
             this.wrong.TabIndex = 34;
@@ -466,7 +467,7 @@ namespace WP_20201022_DEMO1
             // 
             this.labWrong.AutoSize = true;
             this.labWrong.Font = new System.Drawing.Font("新細明體", 20F);
-            this.labWrong.Location = new System.Drawing.Point(331, 6);
+            this.labWrong.Location = new System.Drawing.Point(258, 6);
             this.labWrong.Name = "labWrong";
             this.labWrong.Size = new System.Drawing.Size(25, 27);
             this.labWrong.TabIndex = 36;
@@ -477,7 +478,7 @@ namespace WP_20201022_DEMO1
             this.cB_diff.Font = new System.Drawing.Font("新細明體", 20F);
             this.cB_diff.FormattingEnabled = true;
             this.cB_diff.IntegralHeight = false;
-            this.cB_diff.Location = new System.Drawing.Point(534, 2);
+            this.cB_diff.Location = new System.Drawing.Point(400, 3);
             this.cB_diff.Name = "cB_diff";
             this.cB_diff.Size = new System.Drawing.Size(98, 35);
             this.cB_diff.TabIndex = 37;
@@ -486,17 +487,29 @@ namespace WP_20201022_DEMO1
             // 
             this.difficulty.AutoSize = true;
             this.difficulty.Font = new System.Drawing.Font("新細明體", 20F);
-            this.difficulty.Location = new System.Drawing.Point(435, 6);
+            this.difficulty.Location = new System.Drawing.Point(301, 6);
             this.difficulty.Name = "difficulty";
             this.difficulty.Size = new System.Drawing.Size(93, 27);
             this.difficulty.TabIndex = 38;
             this.difficulty.Text = "难度：";
+            // 
+            // btn_newGame
+            // 
+            this.btn_newGame.Font = new System.Drawing.Font("新細明體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn_newGame.Location = new System.Drawing.Point(1503, 5);
+            this.btn_newGame.Name = "btn_newGame";
+            this.btn_newGame.Size = new System.Drawing.Size(114, 30);
+            this.btn_newGame.TabIndex = 39;
+            this.btn_newGame.Text = "开始新游戏";
+            this.btn_newGame.UseVisualStyleBackColor = true;
+            this.btn_newGame.Click += new System.EventHandler(this.btn_newGame_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1743, 898);
+            this.Controls.Add(this.btn_newGame);
             this.Controls.Add(this.difficulty);
             this.Controls.Add(this.cB_diff);
             this.Controls.Add(this.labWrong);
@@ -617,6 +630,7 @@ namespace WP_20201022_DEMO1
         private System.Windows.Forms.Label labWrong;
         private System.Windows.Forms.ComboBox cB_diff;
         private System.Windows.Forms.Label difficulty;
+        private System.Windows.Forms.Button btn_newGame;
     }
 }
 
