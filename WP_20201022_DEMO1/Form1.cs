@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -101,21 +101,37 @@ namespace WP_20201022_DEMO1
             if (cB_diff.Text == "简单")
             {
                 coverUPAll_esay();
+                poker = p.GetPoker(12);
+                for (int i = 0; i < poker.Count; i++)
+                {
+                    if (poker[i] >= 6)
+                    {
+                        poker[i] -= 6;
+                    }
+                }
             }
             if (cB_diff.Text == "普通")
             {
                 coverUPAll_normal();
+                poker = p.GetPoker(24);
+                for (int i = 0; i < poker.Count; i++)
+                {
+                    if (poker[i] >= 12)
+                    {
+                        poker[i] -= 12;
+                    }
+                }
             }
             if (cB_diff.Text == "困难")
             {
                 coverUPAll_hard();
-            }
-            poker = p.GetPoker(32);
-            for (int i = 0; i < poker.Count; i++)
-            {
-                if (poker[i] >= 16)
+                poker = p.GetPoker(32);
+                for (int i = 0; i < poker.Count; i++)
                 {
-                    poker[i] -= 16;
+                    if (poker[i] >= 16)
+                    {
+                        poker[i] -= 16;
+                    }
                 }
             }
         }
@@ -667,13 +683,13 @@ namespace WP_20201022_DEMO1
             coverUPAll_esay();
 
             //打乱
-            poker = p.GetPoker(20);
+            poker = p.GetPoker(12);
             for (int i = 0; i < poker.Count; i++)
             {
                 //制造重复的值
-                if (poker[i] >= 10)
+                if (poker[i] >= 6)
                 {
-                    poker[i] -= 10;
+                    poker[i] -= 6;
                 }
             }
             #endregion
