@@ -25,6 +25,7 @@ namespace WP_20201022_DEMO1
         int lastClick;
         int clickCounter;
         bool coverIt;
+
         public Form1()
         {
             InitializeComponent();
@@ -57,6 +58,7 @@ namespace WP_20201022_DEMO1
             imagelist.Add(Resources._015);
             imagelist.Add(Resources._016);
             #endregion
+
 
             //预设值
             index = 9999;
@@ -1456,4 +1458,6 @@ namespace WP_20201022_DEMO1
         #endregion
 
     }
+
+
 }
