@@ -25,6 +25,7 @@ namespace WP_20201022_DEMO1
         int lastClick;
         int clickCounter;
         bool coverIt;
+        bool firstTimeToStart;
 
         public Form1()
         {
@@ -33,7 +34,7 @@ namespace WP_20201022_DEMO1
             cB_diff.Items.Add("简单");
             cB_diff.Items.Add("普通");
             cB_diff.Items.Add("困难");
-            cB_diff.SelectedIndex = 0;
+            firstTimeToStart = true;
         }
 
         #region 生命周期
@@ -58,7 +59,7 @@ namespace WP_20201022_DEMO1
             imagelist.Add(Resources._015);
             imagelist.Add(Resources._016);
             #endregion
-
+            cB_diff.SelectedIndex = 0;
 
             //预设值
             index = 9999;
@@ -84,9 +85,43 @@ namespace WP_20201022_DEMO1
             }
         }
 
-        private void Form1_Shown(object sender, EventArgs e)
+        private void cB_diff_TextChanged(object sender, EventArgs e)
         {
-            MessageBox.Show("目前难度为" + cB_diff.Text + "，如果需要变更请选择难度，然后按新游戏", "注意", MessageBoxButtons.OK);
+            if (firstTimeToStart)
+            {
+                MessageBox.Show("预设难度为 " + cB_diff.Text, "注意", MessageBoxButtons.OK);
+                firstTimeToStart = false;
+            }
+            else
+            {
+                string message = "以 " + cB_diff.Text + " 难度开启新游戏";
+                string caption = "注意";
+                DialogResult result;
+                result = MessageBox.Show(message, caption, MessageBoxButtons.OK);
+
+                if (result == System.Windows.Forms.DialogResult.OK)
+                {
+                    countCorrect = 0;
+                    countWrong = 0;
+                    labCorrect.Text = countCorrect + "";
+                    labWrong.Text = countWrong + "";
+
+                    if (cB_diff.Text == "简单")
+                    {
+                        esayMode();
+                    }
+
+                    if (cB_diff.Text == "普通")
+                    {
+                        normalMode();
+                    }
+
+                    if (cB_diff.Text == "困难")
+                    {
+                        hardMode();
+                    }
+                }
+            }
         }
         #endregion
 
@@ -147,14 +182,12 @@ namespace WP_20201022_DEMO1
             string caption = "警告";
             DialogResult result;
             result = MessageBox.Show(message, caption, MessageBoxButtons.YesNo);
-
             if (result == System.Windows.Forms.DialogResult.Yes)
             {
                 countCorrect = 0;
                 countWrong = 0;
                 labCorrect.Text = countCorrect + "";
                 labWrong.Text = countWrong + "";
-
                 if (cB_diff.Text == "简单")
                 {
                     esayMode();
@@ -707,6 +740,11 @@ namespace WP_20201022_DEMO1
             picCards10.Location = new Point(226, 469);
             picCards11.Location = new Point(440, 469);
             picCards12.Location = new Point(654, 469);
+
+            picCards13.Location = new Point(12, 1000);
+            picCards14.Location = new Point(226, 1000);
+            picCards15.Location = new Point(440, 1000);
+            picCards16.Location = new Point(654, 1000);
 
             picCards17.Location = new Point(868, 41);
             picCards18.Location = new Point(1082, 41);
@@ -1514,7 +1552,6 @@ namespace WP_20201022_DEMO1
         }
 
         #endregion
-
     }
 
 
