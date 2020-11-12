@@ -408,6 +408,45 @@ namespace WP_20201022_DEMO1
 
         #region 翻到卡背
         /// <summary>
+        /// 重置image
+        /// </summary>
+        private void reset()
+        {
+            picCards1.Image = null;
+            picCards2.Image = null;
+            picCards3.Image = null;
+            picCards4.Image = null;
+            picCards5.Image = null;
+            picCards6.Image = null;
+            picCards7.Image = null;
+            picCards8.Image = null;
+            picCards9.Image = null;
+            picCards10.Image = null;
+            picCards11.Image = null;
+            picCards12.Image = null;
+            picCards13.Image = null;
+            picCards14.Image = null;
+            picCards15.Image = null;
+            picCards16.Image = null;
+            picCards17.Image = null;
+            picCards18.Image = null;
+            picCards19.Image = null;
+            picCards20.Image = null;
+            picCards21.Image = null;
+            picCards22.Image = null;
+            picCards23.Image = null;
+            picCards24.Image = null;
+            picCards25.Image = null;
+            picCards26.Image = null;
+            picCards27.Image = null;
+            picCards28.Image = null;
+            picCards29.Image = null;
+            picCards30.Image = null;
+            picCards31.Image = null;
+            picCards32.Image = null;
+        }
+
+        /// <summary>
         /// 在简单模式所有翻到卡背
         /// </summary>
         private void coverUPAll_esay()
@@ -649,6 +688,7 @@ namespace WP_20201022_DEMO1
 
         private void esayMode()
         {
+            reset();
             #region 调整版面
             btnGo.Location = new Point(753, 5);
             btn_newGame.Location = new Point(616, 5);
@@ -697,6 +737,7 @@ namespace WP_20201022_DEMO1
 
         private void normalMode()
         {
+            reset();
             #region 调整版面
             btnGo.Location = new Point(1175, 5);
             btn_newGame.Location = new Point(1038, 5);
@@ -765,6 +806,7 @@ namespace WP_20201022_DEMO1
 
         private void hardMode()
         {
+            reset();
             #region 调整版面
             btnGo.Location = new Point(1623, 5);
             btn_newGame.Location = new Point(1486, 5);
