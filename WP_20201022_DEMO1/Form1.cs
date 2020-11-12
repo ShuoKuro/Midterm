@@ -84,45 +84,6 @@ namespace WP_20201022_DEMO1
                 hardMode();
             }
         }
-
-        private void cB_diff_TextChanged(object sender, EventArgs e)
-        {
-            if (firstTimeToStart)
-            {
-                MessageBox.Show("预设难度为 " + cB_diff.Text, "注意", MessageBoxButtons.OK);
-                firstTimeToStart = false;
-            }
-            else
-            {
-                string message = "以 " + cB_diff.Text + " 难度开启新游戏";
-                string caption = "注意";
-                DialogResult result;
-                result = MessageBox.Show(message, caption, MessageBoxButtons.OK);
-
-                if (result == System.Windows.Forms.DialogResult.OK)
-                {
-                    countCorrect = 0;
-                    countWrong = 0;
-                    labCorrect.Text = countCorrect + "";
-                    labWrong.Text = countWrong + "";
-
-                    if (cB_diff.Text == "简单")
-                    {
-                        esayMode();
-                    }
-
-                    if (cB_diff.Text == "普通")
-                    {
-                        normalMode();
-                    }
-
-                    if (cB_diff.Text == "困难")
-                    {
-                        hardMode();
-                    }
-                }
-            }
-        }
         #endregion
 
         #region 按钮
@@ -435,6 +396,45 @@ namespace WP_20201022_DEMO1
                         coverIt = true;
                     }
                     break;
+            }
+        }
+
+        private void cB_diff_TextChanged(object sender, EventArgs e)
+        {
+            if (firstTimeToStart)
+            {
+                MessageBox.Show("预设难度为 " + cB_diff.Text, "注意", MessageBoxButtons.OK);
+                firstTimeToStart = false;
+            }
+            else
+            {
+                string message = "以 " + cB_diff.Text + " 难度开启新游戏";
+                string caption = "注意";
+                DialogResult result;
+                result = MessageBox.Show(message, caption, MessageBoxButtons.OK);
+
+                if (result == System.Windows.Forms.DialogResult.OK)
+                {
+                    countCorrect = 0;
+                    countWrong = 0;
+                    labCorrect.Text = countCorrect + "";
+                    labWrong.Text = countWrong + "";
+
+                    if (cB_diff.Text == "简单")
+                    {
+                        esayMode();
+                    }
+
+                    if (cB_diff.Text == "普通")
+                    {
+                        normalMode();
+                    }
+
+                    if (cB_diff.Text == "困难")
+                    {
+                        hardMode();
+                    }
+                }
             }
         }
         #endregion
