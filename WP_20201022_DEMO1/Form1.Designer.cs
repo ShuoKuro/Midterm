@@ -509,7 +509,7 @@ namespace WP_20201022_DEMO1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1743, 898);
+            this.ClientSize = new System.Drawing.Size(1730, 900);
             this.Controls.Add(this.btn_newGame);
             this.Controls.Add(this.difficulty);
             this.Controls.Add(this.cB_diff);
@@ -553,7 +553,9 @@ namespace WP_20201022_DEMO1
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.Text = "配对";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.Shown += new System.EventHandler(this.Form1_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.picCards1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCards2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCards3)).EndInit();

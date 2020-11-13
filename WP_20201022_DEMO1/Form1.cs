@@ -28,12 +28,7 @@ namespace WP_20201022_DEMO1
         int clickCounter;
         bool coverIt;
         bool firstTimeToStart;
-
-        IFirebaseConfig config = new FirebaseConfig
-        {
-            AuthSecret = "eBgOAQI5uIW06LFti2BPAhchhDxep692YdWcflsT",
-            BasePath = "https://db-midterm-789ff.firebaseio.com/"
-        };
+        public bool formShowed;
 
         public Form1()
         {
@@ -70,6 +65,7 @@ namespace WP_20201022_DEMO1
             #endregion
             cB_diff.SelectedIndex = 0;
 
+
             //预设值
             index = 9999;
             lastIndex = 8888;
@@ -92,6 +88,14 @@ namespace WP_20201022_DEMO1
             {
                 hardMode();
             }
+        }
+        private void Form1_Shown(object sender, EventArgs e)
+        {
+            formShowed = true;
+        }
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            formShowed = false;
         }
         #endregion
 
@@ -728,7 +732,7 @@ namespace WP_20201022_DEMO1
 
         #region 模式
 
-        private void esayMode()
+        public void esayMode()
         {
             reset();
             #region 调整版面
@@ -782,7 +786,7 @@ namespace WP_20201022_DEMO1
             #endregion
         }
 
-        private void normalMode()
+        public void normalMode()
         {
             reset();
             #region 调整版面
@@ -851,7 +855,7 @@ namespace WP_20201022_DEMO1
             #endregion
         }
 
-        private void hardMode()
+        public void hardMode()
         {
             reset();
             #region 调整版面
@@ -894,8 +898,8 @@ namespace WP_20201022_DEMO1
             picCards31.Location = new Point(1296, 683);
             picCards32.Location = new Point(1510, 683);
 
-            this.Width = 1760;
-            this.Height = 940;
+            this.Width = 1730;
+            this.Height = 900;
             #endregion
 
             #region 设定图片
@@ -1561,6 +1565,7 @@ namespace WP_20201022_DEMO1
         }
 
         #endregion
+
     }
 
 
