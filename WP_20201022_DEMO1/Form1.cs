@@ -1,3 +1,5 @@
+using FireSharp.Config;
+using FireSharp.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,6 +28,12 @@ namespace WP_20201022_DEMO1
         int clickCounter;
         bool coverIt;
         bool firstTimeToStart;
+
+        IFirebaseConfig config = new FirebaseConfig
+        {
+            AuthSecret = "eBgOAQI5uIW06LFti2BPAhchhDxep692YdWcflsT",
+            BasePath = "https://db-midterm-789ff.firebaseio.com/"
+        };
 
         public Form1()
         {
