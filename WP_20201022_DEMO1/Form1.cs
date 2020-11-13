@@ -38,6 +38,7 @@ namespace WP_20201022_DEMO1
         public Form1()
         {
             InitializeComponent();
+
             cB_diff.DropDownStyle = ComboBoxStyle.DropDownList;
             cB_diff.Items.Add("简单");
             cB_diff.Items.Add("普通");

@@ -550,6 +550,7 @@ namespace WP_20201022_DEMO1
             this.Controls.Add(this.picCards2);
             this.Controls.Add(this.picCards1);
             this.Controls.Add(this.btnGo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.Text = "配对";
             this.Load += new System.EventHandler(this.Form1_Load);
