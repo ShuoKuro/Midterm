@@ -41,6 +41,19 @@ namespace WP_20201022_DEMO1
             }
         }
 
+        #region 选单
+        private void ts_login_Click(object sender, EventArgs e)
+        {
+            loginForm = new Login();
+            loginForm.Show();
+        }
+
+        private void ts_register_Click(object sender, EventArgs e)
+        {
+            register = new Register();
+            register.Show();
+        }
+
         private void ts_startGame_Click(object sender, EventArgs e)
         {
             if (!loginForm.logined)
@@ -51,6 +64,9 @@ namespace WP_20201022_DEMO1
                 {
                     playForm.MdiParent = this;
                     playForm.Show();
+                    playForm.esayMode();
+                    this.Width = 894;
+                    this.Height = 754;
                     loginForm.logined = true;
                 }
                 if (loginCheckResult == System.Windows.Forms.DialogResult.No)
@@ -65,18 +81,17 @@ namespace WP_20201022_DEMO1
                 playForm.Show();
             }
         }
+        #endregion
 
-        private void ts_login_Click(object sender, EventArgs e)
-        {
-            loginForm = new Login();
-            loginForm.Show();
-        }
-
+        #region 难度
         private void ts_esay_Click(object sender, EventArgs e)
         {
             if (playForm.formShowed)
             {
                 playForm.esayMode();
+                this.Width = 894;
+                this.Height = 754;
+                playForm.modeChange = 0;
             }
             else
             {
@@ -89,6 +104,9 @@ namespace WP_20201022_DEMO1
             if (playForm.formShowed)
             {
                 playForm.normalMode();
+                this.Width = 1322;
+                this.Height = 968;
+                playForm.modeChange = 1;
             }
             else
             {
@@ -103,17 +121,13 @@ namespace WP_20201022_DEMO1
                 playForm.hardMode();
                 this.Width = 1750;
                 this.Height = 968;
+                playForm.modeChange = 2;
             }
             else
             {
                 MessageBox.Show("你还没有开始游戏！！", "警告");
             }
         }
-
-        private void ts_register_Click(object sender, EventArgs e)
-        {
-            register = new Register();
-            register.Show();
-        }
+        #endregion
     }
 }

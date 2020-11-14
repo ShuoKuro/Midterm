@@ -65,7 +65,6 @@ namespace WP_20201022_DEMO1
             this.wrong = new System.Windows.Forms.Label();
             this.labCorrect = new System.Windows.Forms.Label();
             this.labWrong = new System.Windows.Forms.Label();
-            this.cB_diff = new System.Windows.Forms.ComboBox();
             this.difficulty = new System.Windows.Forms.Label();
             this.btn_newGame = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picCards1)).BeginInit();
@@ -473,17 +472,6 @@ namespace WP_20201022_DEMO1
             this.labWrong.TabIndex = 36;
             this.labWrong.Text = "0";
             // 
-            // cB_diff
-            // 
-            this.cB_diff.Font = new System.Drawing.Font("新細明體", 20F);
-            this.cB_diff.FormattingEnabled = true;
-            this.cB_diff.IntegralHeight = false;
-            this.cB_diff.Location = new System.Drawing.Point(400, 3);
-            this.cB_diff.Name = "cB_diff";
-            this.cB_diff.Size = new System.Drawing.Size(98, 35);
-            this.cB_diff.TabIndex = 37;
-            this.cB_diff.TextChanged += new System.EventHandler(this.cB_diff_TextChanged);
-            // 
             // difficulty
             // 
             this.difficulty.AutoSize = true;
@@ -512,7 +500,6 @@ namespace WP_20201022_DEMO1
             this.ClientSize = new System.Drawing.Size(1730, 900);
             this.Controls.Add(this.btn_newGame);
             this.Controls.Add(this.difficulty);
-            this.Controls.Add(this.cB_diff);
             this.Controls.Add(this.labWrong);
             this.Controls.Add(this.labCorrect);
             this.Controls.Add(this.wrong);
@@ -632,7 +619,6 @@ namespace WP_20201022_DEMO1
         private System.Windows.Forms.Label wrong;
         private System.Windows.Forms.Label labCorrect;
         private System.Windows.Forms.Label labWrong;
-        private System.Windows.Forms.ComboBox cB_diff;
         private System.Windows.Forms.Label difficulty;
         private System.Windows.Forms.Button btn_newGame;
     }

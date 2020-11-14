@@ -29,15 +29,11 @@ namespace WP_20201022_DEMO1
         bool coverIt;
         bool firstTimeToStart;
         public bool formShowed;
+        public int modeChange;
 
         public Form1()
         {
             InitializeComponent();
-
-            cB_diff.DropDownStyle = ComboBoxStyle.DropDownList;
-            cB_diff.Items.Add("简单");
-            cB_diff.Items.Add("普通");
-            cB_diff.Items.Add("困难");
             firstTimeToStart = true;
         }
 
@@ -63,8 +59,6 @@ namespace WP_20201022_DEMO1
             imagelist.Add(Resources._015);
             imagelist.Add(Resources._016);
             #endregion
-            cB_diff.SelectedIndex = 0;
-
 
             //预设值
             index = 9999;
@@ -72,22 +66,7 @@ namespace WP_20201022_DEMO1
             countCorrect = 0;
             countWrong = 0;
             clickCounter = 0;
-
-
-            if (cB_diff.Text == "简单")
-            {
-                esayMode();
-            }
-
-            if (cB_diff.Text == "普通")
-            {
-                normalMode();
-            }
-
-            if (cB_diff.Text == "困难")
-            {
-                hardMode();
-            }
+            modeChange = 0;
         }
         private void Form1_Shown(object sender, EventArgs e)
         {
@@ -107,7 +86,7 @@ namespace WP_20201022_DEMO1
         /// <param name="e"></param>
         private void btnGo_Click(object sender, EventArgs e)
         {
-            if (cB_diff.Text == "简单")
+            if (modeChange == 0)
             {
                 coverUPAll_esay();
                 poker = p.GetPoker(12);
@@ -119,7 +98,7 @@ namespace WP_20201022_DEMO1
                     }
                 }
             }
-            if (cB_diff.Text == "普通")
+            if (modeChange == 1)
             {
                 coverUPAll_normal();
                 poker = p.GetPoker(24);
@@ -131,7 +110,7 @@ namespace WP_20201022_DEMO1
                     }
                 }
             }
-            if (cB_diff.Text == "困难")
+            if (modeChange == 2)
             {
                 coverUPAll_hard();
                 poker = p.GetPoker(32);
@@ -152,7 +131,7 @@ namespace WP_20201022_DEMO1
         /// <param name="e"></param>
         private void btn_newGame_Click(object sender, EventArgs e)
         {
-            string message = "你是否以 " + cB_diff.Text + " 难度开启新游戏";
+            string message = "你是否开启新游戏";
             string caption = "警告";
             DialogResult result;
             result = MessageBox.Show(message, caption, MessageBoxButtons.YesNo);
@@ -162,17 +141,17 @@ namespace WP_20201022_DEMO1
                 countWrong = 0;
                 labCorrect.Text = countCorrect + "";
                 labWrong.Text = countWrong + "";
-                if (cB_diff.Text == "简单")
+                if (modeChange == 0)
                 {
                     esayMode();
                 }
 
-                if (cB_diff.Text == "普通")
+                if (modeChange == 1)
                 {
                     normalMode();
                 }
 
-                if (cB_diff.Text == "困难")
+                if (modeChange == 2)
                 {
                     hardMode();
                 }
@@ -410,45 +389,7 @@ namespace WP_20201022_DEMO1
                     }
                     break;
             }
-        }
 
-        private void cB_diff_TextChanged(object sender, EventArgs e)
-        {
-            if (firstTimeToStart)
-            {
-                MessageBox.Show("预设难度为 " + cB_diff.Text, "注意", MessageBoxButtons.OK);
-                firstTimeToStart = false;
-            }
-            else
-            {
-                string message = "以 " + cB_diff.Text + " 难度开启新游戏";
-                string caption = "注意";
-                DialogResult result;
-                result = MessageBox.Show(message, caption, MessageBoxButtons.OK);
-
-                if (result == System.Windows.Forms.DialogResult.OK)
-                {
-                    countCorrect = 0;
-                    countWrong = 0;
-                    labCorrect.Text = countCorrect + "";
-                    labWrong.Text = countWrong + "";
-
-                    if (cB_diff.Text == "简单")
-                    {
-                        esayMode();
-                    }
-
-                    if (cB_diff.Text == "普通")
-                    {
-                        normalMode();
-                    }
-
-                    if (cB_diff.Text == "困难")
-                    {
-                        hardMode();
-                    }
-                }
-            }
         }
         #endregion
 
@@ -764,8 +705,8 @@ namespace WP_20201022_DEMO1
             picCards19.Location = new Point(1296, 41);
             picCards20.Location = new Point(1510, 41);
 
-            this.Width = 890;
-            this.Height = 722;
+            this.Width = 874;
+            this.Height = 686;
 
             #endregion
 
@@ -833,8 +774,8 @@ namespace WP_20201022_DEMO1
             picCards29.Location = new Point(1296, 469);
             picCards30.Location = new Point(1510, 469);
 
-            this.Width = 1311;
-            this.Height = 937;
+            this.Width = 1302;
+            this.Height = 900;
 
             #endregion
 
