@@ -41,6 +41,7 @@
             this.tb_loginName.Name = "tb_loginName";
             this.tb_loginName.Size = new System.Drawing.Size(133, 22);
             this.tb_loginName.TabIndex = 0;
+            this.tb_loginName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_loginName_KeyPress);
             // 
             // tb_password
             // 
@@ -48,6 +49,7 @@
             this.tb_password.Name = "tb_password";
             this.tb_password.Size = new System.Drawing.Size(133, 22);
             this.tb_password.TabIndex = 1;
+            this.tb_password.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_password_KeyPress);
             // 
             // btn_loginCheck
             // 
@@ -89,6 +91,7 @@
             this.Controls.Add(this.tb_loginName);
             this.Name = "Login";
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

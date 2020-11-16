@@ -1,4 +1,8 @@
-﻿using System;
+﻿using FireSharp;
+using FireSharp.Config;
+using FireSharp.Interfaces;
+using FireSharp.Response;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,6 +26,14 @@ namespace WP_20201022_DEMO1
         private const int valiCodeLength = 4;
         private string strValidCode = "";
 
+        IFirebaseConfig config = new FirebaseConfig
+        {
+            AuthSecret = "eBgOAQI5uIW06LFti2BPAhchhDxep692YdWcflsT",
+            BasePath = "https://db-midterm-789ff.firebaseio.com/"
+        };
+
+        IFirebaseClient client;
+
         public Register()
         {
             InitializeComponent();
@@ -29,6 +41,7 @@ namespace WP_20201022_DEMO1
 
         private void Register_Load(object sender, EventArgs e)
         {
+            client = new FirebaseClient(config);
             upDateValidCode();
             validCodeOK = false;
             userNameOK = false;
@@ -46,7 +59,7 @@ namespace WP_20201022_DEMO1
             lb_checkConfirm.Text = "";
         }
 
-        private void btn_check_Click(object sender, EventArgs e)
+        private async void btn_check_Click(object sender, EventArgs e)
         {
             validCodeCheck();
             if (validCodeOK)
@@ -54,6 +67,14 @@ namespace WP_20201022_DEMO1
                 if (userNameOK && passwordOK && passwordCheckOK)
                 {
                     MessageBox.Show("注册完成！！");
+                    var data = new Data
+                    {
+                        UserName = tb_userName.Text,
+                        Password = tb_userPw.Text,
+                        PlayMark = 0
+                    };
+
+                    SetResponse response = await client.SetAsync("User/"+tb_userName.Text,data);
 
                     Close();
                 }
@@ -77,12 +98,12 @@ namespace WP_20201022_DEMO1
 
 
 
-        private void tb_userName_GotFocus(object sender,EventArgs e)
+        private void tb_userName_GotFocus(object sender, EventArgs e)
         {
             lb_checkUserName.Text = "输入8~16位字母或数字，首位为字母";
             lb_checkUserName.ForeColor = Color.Black;
         }
-        private void tb_userName_LostFocus(object sender,EventArgs e)
+        private void tb_userName_LostFocus(object sender, EventArgs e)
         {
             string checkString = tb_userName.Text.Replace(" ", "");
             if (tb_userName.TextLength < 8)
@@ -114,12 +135,12 @@ namespace WP_20201022_DEMO1
             }
         }
 
-        private void tb_userPw_GotFocus(object sender,EventArgs e)
+        private void tb_userPw_GotFocus(object sender, EventArgs e)
         {
             lb_checkPw.Text = "输入8~20字母或数字";
             lb_checkPw.ForeColor = Color.Black;
         }
-        private void tb_userPw_LostFocus(object sender,EventArgs e)
+        private void tb_userPw_LostFocus(object sender, EventArgs e)
         {
             string checkString = tb_userPw.Text.Replace(" ", "");
             if (tb_userPw.TextLength < 8)
@@ -142,12 +163,12 @@ namespace WP_20201022_DEMO1
             }
         }
 
-        private void tb_confirmPw_GotFocus(object sender,EventArgs e)
+        private void tb_confirmPw_GotFocus(object sender, EventArgs e)
         {
             lb_checkConfirm.Text = "重复输入一次密码";
             lb_checkConfirm.ForeColor = Color.Black;
         }
-        private void tb_confirmPw_LostFocus(object sender,EventArgs e)
+        private void tb_confirmPw_LostFocus(object sender, EventArgs e)
         {
             if (tb_userPw.Text != tb_confirmPw.Text)
             {
@@ -219,7 +240,6 @@ namespace WP_20201022_DEMO1
             lb_checkConfirm.ForeColor = Color.Red;
         }
         #endregion
-
 
         #region 验证码
         private void upDateValidCode()

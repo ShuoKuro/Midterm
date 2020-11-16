@@ -1,6 +1,7 @@
 ﻿using FireSharp;
 using FireSharp.Config;
 using FireSharp.Interfaces;
+using FireSharp.Response;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,8 +21,6 @@ namespace WP_20201022_DEMO1
         Register register = new Register();
         int saveMark;
 
-
-
         IFirebaseConfig config = new FirebaseConfig
         {
             AuthSecret = "eBgOAQI5uIW06LFti2BPAhchhDxep692YdWcflsT",
@@ -29,6 +28,7 @@ namespace WP_20201022_DEMO1
         };
 
         IFirebaseClient client;
+
 
         public Main()
         {
@@ -110,6 +110,8 @@ namespace WP_20201022_DEMO1
             }
             else
             {
+                playForm.userName = loginForm.userName;
+                playForm.playMark = loginForm.playMark;
                 playForm.MdiParent = this;
                 this.Width = 894;
                 this.Height = 754;
@@ -118,7 +120,7 @@ namespace WP_20201022_DEMO1
             }
         }
 
-        private void ts_saveGame_Click(object sender, EventArgs e)
+        private async void ts_saveGame_Click(object sender, EventArgs e)
         {
             if (loginForm.notLoginStart)
             {
@@ -126,8 +128,16 @@ namespace WP_20201022_DEMO1
             }
             else
             {
-                MessageBox.Show("已经成功储存！");
                 saveMark = playForm.playMark;
+                var data = new Data
+                {
+                    UserName = loginForm.userName,
+                    Password = loginForm.password,
+                    PlayMark = saveMark
+                };
+                FirebaseResponse response = await client.UpdateAsync("User/" + loginForm.userName, data);
+                MessageBox.Show("已经成功储存！");
+
             }
         }
         #endregion
@@ -178,5 +188,6 @@ namespace WP_20201022_DEMO1
             }
         }
         #endregion=
+
     }
 }
