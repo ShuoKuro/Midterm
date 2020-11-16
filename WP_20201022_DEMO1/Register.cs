@@ -54,6 +54,7 @@ namespace WP_20201022_DEMO1
                 if (userNameOK && passwordOK && passwordCheckOK)
                 {
                     MessageBox.Show("注册完成！！");
+
                     Close();
                 }
                 if (!passwordCheckOK)
@@ -93,8 +94,17 @@ namespace WP_20201022_DEMO1
             {
                 if (checkString == tb_userName.Text)
                 {
-                    userNameCorrect();
-                    userNameOK = true;
+                    char[] checkChar = tb_userName.Text.ToCharArray();
+                    if (char.IsLetter(checkChar[0]))
+                    {
+                        userNameCorrect();
+                        userNameOK = true;
+                    }
+                    else
+                    {
+                        userNameWrong();
+                        userNameOK = false;
+                    }
                 }
                 else
                 {
@@ -111,7 +121,7 @@ namespace WP_20201022_DEMO1
         }
         private void tb_userPw_LostFocus(object sender,EventArgs e)
         {
-            string checkString = tb_userName.Text.Replace(" ", "");
+            string checkString = tb_userPw.Text.Replace(" ", "");
             if (tb_userPw.TextLength < 8)
             {
                 userPasswordWrong();
@@ -119,7 +129,7 @@ namespace WP_20201022_DEMO1
             }
             else
             {
-                if (checkString == tb_userName.Text)
+                if (checkString == tb_userPw.Text)
                 {
                     userPasswordCorrect();
                     passwordOK = true;
