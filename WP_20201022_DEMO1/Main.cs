@@ -47,7 +47,7 @@ namespace WP_20201022_DEMO1
         }
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if(saveMark != playForm.playMark)
+            if (saveMark != playForm.playMark)
             {
                 if (loginForm.logined)
                 {
@@ -122,22 +122,28 @@ namespace WP_20201022_DEMO1
 
         private async void ts_saveGame_Click(object sender, EventArgs e)
         {
-            if (loginForm.notLoginStart)
+            if (loginForm.logined)
             {
-                MessageBox.Show("你还没登入，无法储存！", "警告");
+                if (loginForm.notLoginStart)
+                {
+                    MessageBox.Show("你还没登入，无法储存！", "警告");
+                }
+                else
+                {
+                    saveMark = playForm.playMark;
+                    var data = new Data
+                    {
+                        UserName = loginForm.userName,
+                        Password = loginForm.password,
+                        PlayMark = saveMark
+                    };
+                    FirebaseResponse response = await client.UpdateAsync("User/" + loginForm.userName, data);
+                    MessageBox.Show("已经成功储存！");
+                }
             }
             else
             {
-                saveMark = playForm.playMark;
-                var data = new Data
-                {
-                    UserName = loginForm.userName,
-                    Password = loginForm.password,
-                    PlayMark = saveMark
-                };
-                FirebaseResponse response = await client.UpdateAsync("User/" + loginForm.userName, data);
-                MessageBox.Show("已经成功储存！");
-
+                MessageBox.Show("没有东西可以储", "警告");
             }
         }
         #endregion
