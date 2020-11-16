@@ -18,6 +18,8 @@ namespace WP_20201022_DEMO1
         Form1 playForm = new Form1();
         Login loginForm = new Login();
         Register register = new Register();
+        int saveMark;
+
 
 
         IFirebaseConfig config = new FirebaseConfig
@@ -32,14 +34,43 @@ namespace WP_20201022_DEMO1
         {
             InitializeComponent();
         }
+
+
+        #region 生命周期
         private void Main_Load(object sender, EventArgs e)
         {
             client = new FirebaseClient(config);
             if (client == null)
             {
-                MessageBox.Show("无法建立连线");
+                MessageBox.Show("无法建立连线，登入功能无法使用！");
             }
         }
+        private void Main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if(saveMark != playForm.playMark)
+            {
+                if (loginForm.logined)
+                {
+                    DialogResult closingSaveCheckResult;
+                    closingSaveCheckResult = MessageBox.Show("你是否不储存就离开", "提示", MessageBoxButtons.YesNo);
+                    if (closingSaveCheckResult == System.Windows.Forms.DialogResult.No)
+                    {
+                        e.Cancel = true;
+                    }
+                }
+                else
+                {
+                    DialogResult closingSaveCheckResult;
+                    closingSaveCheckResult = MessageBox.Show("你是否不储存就离开", "提示", MessageBoxButtons.YesNo);
+                    if (closingSaveCheckResult == System.Windows.Forms.DialogResult.No)
+                    {
+                        e.Cancel = true;
+                        MessageBox.Show("没登入是无法储存的", "注意");
+                    }
+                }
+            }
+        }
+        #endregion
 
         #region 选单
         private void ts_login_Click(object sender, EventArgs e)
@@ -63,11 +94,13 @@ namespace WP_20201022_DEMO1
                 if (loginCheckResult == System.Windows.Forms.DialogResult.Yes)
                 {
                     playForm.MdiParent = this;
+                    playForm.userName = "游客";
                     playForm.Show();
                     playForm.esayMode();
                     this.Width = 894;
                     this.Height = 754;
                     loginForm.logined = true;
+                    loginForm.notLoginStart = true;
                 }
                 if (loginCheckResult == System.Windows.Forms.DialogResult.No)
                 {
@@ -78,7 +111,23 @@ namespace WP_20201022_DEMO1
             else
             {
                 playForm.MdiParent = this;
+                this.Width = 894;
+                this.Height = 754;
                 playForm.Show();
+                playForm.esayMode();
+            }
+        }
+
+        private void ts_saveGame_Click(object sender, EventArgs e)
+        {
+            if (loginForm.notLoginStart)
+            {
+                MessageBox.Show("你还没登入，无法储存！", "警告");
+            }
+            else
+            {
+                MessageBox.Show("已经成功储存！");
+                saveMark = playForm.playMark;
             }
         }
         #endregion
@@ -128,6 +177,6 @@ namespace WP_20201022_DEMO1
                 MessageBox.Show("你还没有开始游戏！！", "警告");
             }
         }
-        #endregion
+        #endregion=
     }
 }

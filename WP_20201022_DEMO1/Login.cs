@@ -13,6 +13,7 @@ namespace WP_20201022_DEMO1
     public partial class Login : Form
     {
         public bool logined;
+        public bool notLoginStart;
 
         public Login()
         {
@@ -22,6 +23,7 @@ namespace WP_20201022_DEMO1
         private void btn_loginCheck_Click(object sender, EventArgs e)
         {
             logined = true;
+            notLoginStart = false;
             Close();
         }
     }

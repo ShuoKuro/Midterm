@@ -32,11 +32,12 @@
             this.ts_mainMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.ts_register = new System.Windows.Forms.ToolStripMenuItem();
             this.ts_login = new System.Windows.Forms.ToolStripMenuItem();
+            this.ts_startGame = new System.Windows.Forms.ToolStripMenuItem();
             this.ts_diff = new System.Windows.Forms.ToolStripMenuItem();
             this.ts_esay = new System.Windows.Forms.ToolStripMenuItem();
             this.ts_normal = new System.Windows.Forms.ToolStripMenuItem();
             this.ts_hard = new System.Windows.Forms.ToolStripMenuItem();
-            this.ts_startGame = new System.Windows.Forms.ToolStripMenuItem();
+            this.ts_saveGame = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,7 +57,8 @@
             this.ts_mainMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ts_register,
             this.ts_login,
-            this.ts_startGame});
+            this.ts_startGame,
+            this.ts_saveGame});
             this.ts_mainMenu.Name = "ts_mainMenu";
             this.ts_mainMenu.Size = new System.Drawing.Size(44, 21);
             this.ts_mainMenu.Text = "选单";
@@ -75,6 +77,13 @@
             this.ts_login.Text = "登入";
             this.ts_login.Click += new System.EventHandler(this.ts_login_Click);
             // 
+            // ts_startGame
+            // 
+            this.ts_startGame.Name = "ts_startGame";
+            this.ts_startGame.Size = new System.Drawing.Size(180, 22);
+            this.ts_startGame.Text = "开始游戏";
+            this.ts_startGame.Click += new System.EventHandler(this.ts_startGame_Click);
+            // 
             // ts_diff
             // 
             this.ts_diff.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -88,30 +97,30 @@
             // ts_esay
             // 
             this.ts_esay.Name = "ts_esay";
-            this.ts_esay.Size = new System.Drawing.Size(180, 22);
+            this.ts_esay.Size = new System.Drawing.Size(100, 22);
             this.ts_esay.Text = "简单";
             this.ts_esay.Click += new System.EventHandler(this.ts_esay_Click);
             // 
             // ts_normal
             // 
             this.ts_normal.Name = "ts_normal";
-            this.ts_normal.Size = new System.Drawing.Size(180, 22);
+            this.ts_normal.Size = new System.Drawing.Size(100, 22);
             this.ts_normal.Text = "普通";
             this.ts_normal.Click += new System.EventHandler(this.ts_normal_Click);
             // 
             // ts_hard
             // 
             this.ts_hard.Name = "ts_hard";
-            this.ts_hard.Size = new System.Drawing.Size(180, 22);
+            this.ts_hard.Size = new System.Drawing.Size(100, 22);
             this.ts_hard.Text = "困难";
             this.ts_hard.Click += new System.EventHandler(this.ts_hard_Click);
             // 
-            // ts_startGame
+            // ts_saveGame
             // 
-            this.ts_startGame.Name = "ts_startGame";
-            this.ts_startGame.Size = new System.Drawing.Size(180, 22);
-            this.ts_startGame.Text = "开始游戏";
-            this.ts_startGame.Click += new System.EventHandler(this.ts_startGame_Click);
+            this.ts_saveGame.Name = "ts_saveGame";
+            this.ts_saveGame.Size = new System.Drawing.Size(180, 22);
+            this.ts_saveGame.Text = "储存";
+            this.ts_saveGame.Click += new System.EventHandler(this.ts_saveGame_Click);
             // 
             // Main
             // 
@@ -123,6 +132,7 @@
             this.IsMdiContainer = true;
             this.Name = "Main";
             this.Text = "Main";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.Load += new System.EventHandler(this.Main_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -142,5 +152,6 @@
         private System.Windows.Forms.ToolStripMenuItem ts_normal;
         private System.Windows.Forms.ToolStripMenuItem ts_hard;
         private System.Windows.Forms.ToolStripMenuItem ts_startGame;
+        private System.Windows.Forms.ToolStripMenuItem ts_saveGame;
     }
 }

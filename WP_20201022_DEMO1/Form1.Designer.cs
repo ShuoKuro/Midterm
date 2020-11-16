@@ -61,12 +61,10 @@ namespace WP_20201022_DEMO1
             this.picCards27 = new System.Windows.Forms.PictureBox();
             this.picCards26 = new System.Windows.Forms.PictureBox();
             this.picCards25 = new System.Windows.Forms.PictureBox();
-            this.correct = new System.Windows.Forms.Label();
-            this.wrong = new System.Windows.Forms.Label();
-            this.labCorrect = new System.Windows.Forms.Label();
-            this.labWrong = new System.Windows.Forms.Label();
             this.difficulty = new System.Windows.Forms.Label();
-            this.btn_newGame = new System.Windows.Forms.Button();
+            this.lb_mark = new System.Windows.Forms.Label();
+            this.lb_user = new System.Windows.Forms.Label();
+            this.lb_userName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picCards1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCards2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCards3)).BeginInit();
@@ -432,78 +430,54 @@ namespace WP_20201022_DEMO1
             this.picCards25.Click += new System.EventHandler(this.picCards25_Click);
             this.picCards25.MouseLeave += new System.EventHandler(this.picCards25_MouseLeave);
             // 
-            // correct
-            // 
-            this.correct.AutoSize = true;
-            this.correct.Font = new System.Drawing.Font("新細明體", 20F);
-            this.correct.Location = new System.Drawing.Point(19, 6);
-            this.correct.Name = "correct";
-            this.correct.Size = new System.Drawing.Size(93, 27);
-            this.correct.TabIndex = 33;
-            this.correct.Text = "正确：";
-            // 
-            // wrong
-            // 
-            this.wrong.AutoSize = true;
-            this.wrong.Font = new System.Drawing.Font("新細明體", 20F);
-            this.wrong.Location = new System.Drawing.Point(159, 6);
-            this.wrong.Name = "wrong";
-            this.wrong.Size = new System.Drawing.Size(93, 27);
-            this.wrong.TabIndex = 34;
-            this.wrong.Text = "错误：";
-            // 
-            // labCorrect
-            // 
-            this.labCorrect.AutoSize = true;
-            this.labCorrect.Font = new System.Drawing.Font("新細明體", 20F);
-            this.labCorrect.Location = new System.Drawing.Point(118, 6);
-            this.labCorrect.Name = "labCorrect";
-            this.labCorrect.Size = new System.Drawing.Size(25, 27);
-            this.labCorrect.TabIndex = 35;
-            this.labCorrect.Text = "0";
-            // 
-            // labWrong
-            // 
-            this.labWrong.AutoSize = true;
-            this.labWrong.Font = new System.Drawing.Font("新細明體", 20F);
-            this.labWrong.Location = new System.Drawing.Point(258, 6);
-            this.labWrong.Name = "labWrong";
-            this.labWrong.Size = new System.Drawing.Size(25, 27);
-            this.labWrong.TabIndex = 36;
-            this.labWrong.Text = "0";
-            // 
             // difficulty
             // 
             this.difficulty.AutoSize = true;
             this.difficulty.Font = new System.Drawing.Font("新細明體", 20F);
-            this.difficulty.Location = new System.Drawing.Point(301, 6);
+            this.difficulty.Location = new System.Drawing.Point(12, 8);
             this.difficulty.Name = "difficulty";
             this.difficulty.Size = new System.Drawing.Size(93, 27);
             this.difficulty.TabIndex = 38;
-            this.difficulty.Text = "难度：";
+            this.difficulty.Text = "分数：";
             // 
-            // btn_newGame
+            // lb_mark
             // 
-            this.btn_newGame.Font = new System.Drawing.Font("新細明體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btn_newGame.Location = new System.Drawing.Point(1503, 5);
-            this.btn_newGame.Name = "btn_newGame";
-            this.btn_newGame.Size = new System.Drawing.Size(114, 30);
-            this.btn_newGame.TabIndex = 39;
-            this.btn_newGame.Text = "开始新游戏";
-            this.btn_newGame.UseVisualStyleBackColor = true;
-            this.btn_newGame.Click += new System.EventHandler(this.btn_newGame_Click);
+            this.lb_mark.AutoSize = true;
+            this.lb_mark.Font = new System.Drawing.Font("新細明體", 20F);
+            this.lb_mark.Location = new System.Drawing.Point(111, 8);
+            this.lb_mark.Name = "lb_mark";
+            this.lb_mark.Size = new System.Drawing.Size(25, 27);
+            this.lb_mark.TabIndex = 40;
+            this.lb_mark.Text = "0";
+            // 
+            // lb_user
+            // 
+            this.lb_user.AutoSize = true;
+            this.lb_user.Font = new System.Drawing.Font("新細明體", 20F);
+            this.lb_user.Location = new System.Drawing.Point(221, 8);
+            this.lb_user.Name = "lb_user";
+            this.lb_user.Size = new System.Drawing.Size(93, 27);
+            this.lb_user.TabIndex = 41;
+            this.lb_user.Text = "玩家：";
+            // 
+            // lb_userName
+            // 
+            this.lb_userName.AutoSize = true;
+            this.lb_userName.Font = new System.Drawing.Font("新細明體", 20F);
+            this.lb_userName.Location = new System.Drawing.Point(320, 8);
+            this.lb_userName.Name = "lb_userName";
+            this.lb_userName.Size = new System.Drawing.Size(0, 27);
+            this.lb_userName.TabIndex = 42;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1730, 900);
-            this.Controls.Add(this.btn_newGame);
+            this.Controls.Add(this.lb_userName);
+            this.Controls.Add(this.lb_user);
+            this.Controls.Add(this.lb_mark);
             this.Controls.Add(this.difficulty);
-            this.Controls.Add(this.labWrong);
-            this.Controls.Add(this.labCorrect);
-            this.Controls.Add(this.wrong);
-            this.Controls.Add(this.correct);
             this.Controls.Add(this.picCards32);
             this.Controls.Add(this.picCards31);
             this.Controls.Add(this.picCards30);
@@ -615,12 +589,10 @@ namespace WP_20201022_DEMO1
         private System.Windows.Forms.PictureBox picCards27;
         private System.Windows.Forms.PictureBox picCards26;
         private System.Windows.Forms.PictureBox picCards25;
-        private System.Windows.Forms.Label correct;
-        private System.Windows.Forms.Label wrong;
-        private System.Windows.Forms.Label labCorrect;
-        private System.Windows.Forms.Label labWrong;
         private System.Windows.Forms.Label difficulty;
-        private System.Windows.Forms.Button btn_newGame;
+        private System.Windows.Forms.Label lb_mark;
+        private System.Windows.Forms.Label lb_user;
+        private System.Windows.Forms.Label lb_userName;
     }
 }
 

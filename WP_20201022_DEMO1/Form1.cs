@@ -27,14 +27,14 @@ namespace WP_20201022_DEMO1
         int lastClick;
         int clickCounter;
         bool coverIt;
-        bool firstTimeToStart;
+        public int playMark;
         public bool formShowed;
         public int modeChange;
+        public string userName;
 
         public Form1()
         {
             InitializeComponent();
-            firstTimeToStart = true;
         }
 
         #region 生命周期
@@ -67,6 +67,7 @@ namespace WP_20201022_DEMO1
             countWrong = 0;
             clickCounter = 0;
             modeChange = 0;
+            lb_userName.Text = userName;
         }
         private void Form1_Shown(object sender, EventArgs e)
         {
@@ -124,39 +125,6 @@ namespace WP_20201022_DEMO1
             }
         }
 
-        /// <summary>
-        ///开启新游戏
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btn_newGame_Click(object sender, EventArgs e)
-        {
-            string message = "你是否开启新游戏";
-            string caption = "警告";
-            DialogResult result;
-            result = MessageBox.Show(message, caption, MessageBoxButtons.YesNo);
-            if (result == System.Windows.Forms.DialogResult.Yes)
-            {
-                countCorrect = 0;
-                countWrong = 0;
-                labCorrect.Text = countCorrect + "";
-                labWrong.Text = countWrong + "";
-                if (modeChange == 0)
-                {
-                    esayMode();
-                }
-
-                if (modeChange == 1)
-                {
-                    normalMode();
-                }
-
-                if (modeChange == 2)
-                {
-                    hardMode();
-                }
-            }
-        }
         #endregion
 
         #region 逻辑判断
@@ -379,13 +347,55 @@ namespace WP_20201022_DEMO1
                     if (index == lastIndex)
                     {
                         countCorrect += 1;
-                        labCorrect.Text = countCorrect + "";
                     }
                     if (index != lastIndex)
                     {
                         countWrong += 1;
-                        labWrong.Text = countWrong + "";
                         coverIt = true;
+                    }
+                    switch (modeChange)
+                    {
+                        case 0:
+                            if (countCorrect == 1)
+                            {
+                                countCorrect = 0;
+                                if (countWrong >= 8)
+                                {
+                                    playMark += 2;
+                                }
+                                else
+                                {
+                                    playMark += 10 - countWrong;
+                                }
+                                countWrong = 0;
+                                lb_mark.Text = playMark.ToString();
+                            }
+                            break;
+                        case 1:
+                            if (countCorrect == 1)
+                            {
+                                countCorrect = 0;
+                                if (countWrong >= 8)
+                                {
+                                    playMark += 2;
+                                }
+                                else
+                                {
+                                    playMark += 20 - countWrong * 2;
+                                }
+                                countWrong = 0;
+                                lb_mark.Text = playMark.ToString();
+                            }
+                            break;
+                        case 2:
+                            if (countCorrect == 1)
+                            {
+                                countCorrect = 0;
+                                playMark += 40 - countWrong * 4;
+                                countWrong = 0;
+                                lb_mark.Text = playMark.ToString();
+                            }
+                            break;
                     }
                     break;
             }
@@ -678,7 +688,6 @@ namespace WP_20201022_DEMO1
             reset();
             #region 调整版面
             btnGo.Location = new Point(753, 5);
-            btn_newGame.Location = new Point(616, 5);
 
             picCards1.Location = new Point(12, 41);
             picCards2.Location = new Point(226, 41);
@@ -732,7 +741,6 @@ namespace WP_20201022_DEMO1
             reset();
             #region 调整版面
             btnGo.Location = new Point(1175, 5);
-            btn_newGame.Location = new Point(1038, 5);
 
             picCards1.Location = new Point(12, 41);
             picCards2.Location = new Point(226, 41);
@@ -801,7 +809,6 @@ namespace WP_20201022_DEMO1
             reset();
             #region 调整版面
             btnGo.Location = new Point(1623, 5);
-            btn_newGame.Location = new Point(1486, 5);
 
             picCards1.Location = new Point(12, 41);
             picCards2.Location = new Point(226, 41);
