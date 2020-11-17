@@ -33,11 +33,11 @@
             this.ts_register = new System.Windows.Forms.ToolStripMenuItem();
             this.ts_login = new System.Windows.Forms.ToolStripMenuItem();
             this.ts_startGame = new System.Windows.Forms.ToolStripMenuItem();
+            this.ts_saveGame = new System.Windows.Forms.ToolStripMenuItem();
             this.ts_diff = new System.Windows.Forms.ToolStripMenuItem();
             this.ts_esay = new System.Windows.Forms.ToolStripMenuItem();
             this.ts_normal = new System.Windows.Forms.ToolStripMenuItem();
             this.ts_hard = new System.Windows.Forms.ToolStripMenuItem();
-            this.ts_saveGame = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,23 +66,30 @@
             // ts_register
             // 
             this.ts_register.Name = "ts_register";
-            this.ts_register.Size = new System.Drawing.Size(180, 22);
+            this.ts_register.Size = new System.Drawing.Size(124, 22);
             this.ts_register.Text = "注册";
             this.ts_register.Click += new System.EventHandler(this.ts_register_Click);
             // 
             // ts_login
             // 
             this.ts_login.Name = "ts_login";
-            this.ts_login.Size = new System.Drawing.Size(180, 22);
+            this.ts_login.Size = new System.Drawing.Size(124, 22);
             this.ts_login.Text = "登入";
             this.ts_login.Click += new System.EventHandler(this.ts_login_Click);
             // 
             // ts_startGame
             // 
             this.ts_startGame.Name = "ts_startGame";
-            this.ts_startGame.Size = new System.Drawing.Size(180, 22);
+            this.ts_startGame.Size = new System.Drawing.Size(124, 22);
             this.ts_startGame.Text = "开始游戏";
             this.ts_startGame.Click += new System.EventHandler(this.ts_startGame_Click);
+            // 
+            // ts_saveGame
+            // 
+            this.ts_saveGame.Name = "ts_saveGame";
+            this.ts_saveGame.Size = new System.Drawing.Size(124, 22);
+            this.ts_saveGame.Text = "储存";
+            this.ts_saveGame.Click += new System.EventHandler(this.ts_saveGame_Click);
             // 
             // ts_diff
             // 
@@ -115,13 +122,6 @@
             this.ts_hard.Text = "困难";
             this.ts_hard.Click += new System.EventHandler(this.ts_hard_Click);
             // 
-            // ts_saveGame
-            // 
-            this.ts_saveGame.Name = "ts_saveGame";
-            this.ts_saveGame.Size = new System.Drawing.Size(180, 22);
-            this.ts_saveGame.Text = "储存";
-            this.ts_saveGame.Click += new System.EventHandler(this.ts_saveGame_Click);
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -131,7 +131,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.IsMdiContainer = true;
             this.Name = "Main";
-            this.Text = "Main";
+            this.Text = "配对游戏";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.Load += new System.EventHandler(this.Main_Load);
             this.menuStrip1.ResumeLayout(false);

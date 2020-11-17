@@ -90,7 +90,7 @@
             this.Controls.Add(this.tb_password);
             this.Controls.Add(this.tb_loginName);
             this.Name = "Login";
-            this.Text = "Login";
+            this.Text = "登入";
             this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

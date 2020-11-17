@@ -51,8 +51,6 @@
             this.tb_userName.Size = new System.Drawing.Size(119, 22);
             this.tb_userName.TabIndex = 0;
             this.tb_userName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_userName_KeyPress);
-            this.tb_userName.GotFocus += tb_userName_GotFocus;
-            this.tb_userName.LostFocus += tb_userName_LostFocus;
             // 
             // tb_userPw
             // 
@@ -61,8 +59,6 @@
             this.tb_userPw.Size = new System.Drawing.Size(119, 22);
             this.tb_userPw.TabIndex = 1;
             this.tb_userPw.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_userPw_KeyPress);
-            this.tb_userPw.GotFocus += tb_userPw_GotFocus;
-            this.tb_userPw.LostFocus += tb_userPw_LostFocus;
             // 
             // tb_confirmPw
             // 
@@ -70,8 +66,6 @@
             this.tb_confirmPw.Name = "tb_confirmPw";
             this.tb_confirmPw.Size = new System.Drawing.Size(119, 22);
             this.tb_confirmPw.TabIndex = 2;
-            this.tb_confirmPw.GotFocus += tb_confirmPw_GotFocus;
-            this.tb_confirmPw.LostFocus += tb_confirmPw_LostFocus;
             // 
             // btn_check
             // 
@@ -182,7 +176,7 @@
             this.Controls.Add(this.tb_userPw);
             this.Controls.Add(this.tb_userName);
             this.Name = "Register";
-            this.Text = "Register";
+            this.Text = "注册";
             this.Load += new System.EventHandler(this.Register_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pb_checkCode)).EndInit();
             this.ResumeLayout(false);
