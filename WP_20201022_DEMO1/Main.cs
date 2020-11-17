@@ -20,6 +20,7 @@ namespace WP_20201022_DEMO1
         Login loginForm = new Login();
         Register register = new Register();
         int saveMark;
+        bool cantlogin;
 
         IFirebaseConfig config = new FirebaseConfig
         {
@@ -42,7 +43,8 @@ namespace WP_20201022_DEMO1
             client = new FirebaseClient(config);
             if (client == null)
             {
-                MessageBox.Show("无法建立连线，登入功能无法使用！");
+                MessageBox.Show("无法建立连线，连线功能无法使用！");
+                cantlogin = true;
             }
         }
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
@@ -77,8 +79,15 @@ namespace WP_20201022_DEMO1
         {
             if (!loginForm.notLoginStart)
             {
-                loginForm = new Login();
-                loginForm.Show();
+                if (!cantlogin)
+                {
+                    loginForm = new Login();
+                    loginForm.Show();
+                }
+                else
+                {
+                    MessageBox.Show("无法建立连线，连线功能无法使用！");
+                }
             }
             else
             {
@@ -89,8 +98,15 @@ namespace WP_20201022_DEMO1
 
         private void ts_register_Click(object sender, EventArgs e)
         {
-            register = new Register();
-            register.Show();
+            if (!cantlogin)
+            {
+                register = new Register();
+                register.Show();
+            }
+            else
+            {
+                MessageBox.Show("无法建立连线，连线功能无法使用！");
+            }
         }
 
         private void ts_startGame_Click(object sender, EventArgs e)
@@ -145,7 +161,14 @@ namespace WP_20201022_DEMO1
             {
                 if (loginForm.notLoginStart)
                 {
-                    MessageBox.Show("你还没登入，无法储存！", "警告");
+                    if (!cantlogin)
+                    {
+                        MessageBox.Show("你还没登入，无法储存！", "警告");
+                    }
+                    else
+                    {
+                        MessageBox.Show("无法建立连线，连线功能无法使用！");
+                    }
                 }
                 else
                 {
