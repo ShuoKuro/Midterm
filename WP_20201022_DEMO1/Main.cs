@@ -75,8 +75,16 @@ namespace WP_20201022_DEMO1
         #region 选单
         private void ts_login_Click(object sender, EventArgs e)
         {
-            loginForm = new Login();
-            loginForm.Show();
+            if (!loginForm.notLoginStart)
+            {
+                loginForm = new Login();
+                loginForm.Show();
+            }
+            else
+            {
+                MessageBox.Show("你已用游客的身份开始游戏！");
+            }
+
         }
 
         private void ts_register_Click(object sender, EventArgs e)
@@ -87,37 +95,48 @@ namespace WP_20201022_DEMO1
 
         private void ts_startGame_Click(object sender, EventArgs e)
         {
-            if (!loginForm.logined)
+            if (!playForm.formShowed)
             {
-                DialogResult loginCheckResult;
-                loginCheckResult = MessageBox.Show("你是否不登入就开始游戏", "", MessageBoxButtons.YesNo);
-                if (loginCheckResult == System.Windows.Forms.DialogResult.Yes)
+                if (!loginForm.logined)
                 {
+                    DialogResult loginCheckResult;
+                    MessageBox.Show("以游客的身份游玩将再无法登入和储存");
+                    loginCheckResult = MessageBox.Show("你是否不登入就开始游戏", "", MessageBoxButtons.YesNo);
+                    if (loginCheckResult == System.Windows.Forms.DialogResult.Yes)
+                    {
+                        playForm.MdiParent = this;
+                        playForm.userName = "游客";
+                        playForm.playMark = 0;
+                        playForm.Show();
+                        playForm.esayMode();
+                        this.Width = 894;
+                        this.Height = 754;
+                        loginForm.logined = true;
+                        loginForm.notLoginStart = true;
+                    }
+                    if (loginCheckResult == System.Windows.Forms.DialogResult.No)
+                    {
+                        loginForm = new Login();
+                        loginForm.Show();
+                    }
+                }
+                else
+                {
+                    playForm.userName = loginForm.userName;
+                    playForm.playMark = loginForm.playMark;
+                    saveMark = loginForm.playMark;
                     playForm.MdiParent = this;
-                    playForm.userName = "游客";
-                    playForm.Show();
-                    playForm.esayMode();
                     this.Width = 894;
                     this.Height = 754;
-                    loginForm.logined = true;
-                    loginForm.notLoginStart = true;
-                }
-                if (loginCheckResult == System.Windows.Forms.DialogResult.No)
-                {
-                    loginForm = new Login();
-                    loginForm.Show();
+                    playForm.Show();
+                    playForm.esayMode();
                 }
             }
             else
             {
-                playForm.userName = loginForm.userName;
-                playForm.playMark = loginForm.playMark;
-                playForm.MdiParent = this;
-                this.Width = 894;
-                this.Height = 754;
-                playForm.Show();
-                playForm.esayMode();
+                MessageBox.Show("你已经开始了游戏!!");
             }
+
         }
 
         private async void ts_saveGame_Click(object sender, EventArgs e)

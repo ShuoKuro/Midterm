@@ -68,6 +68,7 @@ namespace WP_20201022_DEMO1
             clickCounter = 0;
             modeChange = 0;
             lb_userName.Text = userName;
+            lb_mark.Text = playMark.ToString();
         }
         private void Form1_Shown(object sender, EventArgs e)
         {
