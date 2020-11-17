@@ -74,7 +74,7 @@ namespace WP_20201022_DEMO1
                         PlayMark = 0
                     };
 
-                    SetResponse response = await client.SetAsync("User/"+tb_userName.Text,data);
+                    SetResponse response = await client.SetAsync("User/" + tb_userName.Text, data);
 
                     Close();
                 }
@@ -103,7 +103,7 @@ namespace WP_20201022_DEMO1
             lb_checkUserName.Text = "输入8~16位字母或数字，首位为字母";
             lb_checkUserName.ForeColor = Color.Black;
         }
-        private void tb_userName_LostFocus(object sender, EventArgs e)
+        private async void tb_userName_LostFocus(object sender, EventArgs e)
         {
             string checkString = tb_userName.Text.Replace(" ", "");
             if (tb_userName.TextLength < 8)
@@ -118,8 +118,19 @@ namespace WP_20201022_DEMO1
                     char[] checkChar = tb_userName.Text.ToCharArray();
                     if (char.IsLetter(checkChar[0]))
                     {
-                        userNameCorrect();
-                        userNameOK = true;
+                        FirebaseResponse response = await client.GetAsync("User/" + tb_userName.Text);
+                        Data checkobj = response.ResultAs<Data>();
+                        if (response.ResultAs<Data>() == null)
+                        {
+                            userNameCorrect();
+                            userNameOK = true;
+                        }
+                        else
+                        {
+                            lb_checkUserName.Text = "账号名称已被使用";
+                            lb_checkUserName.ForeColor = Color.Red;
+                            userNameOK = false;
+                        }
                     }
                     else
                     {
