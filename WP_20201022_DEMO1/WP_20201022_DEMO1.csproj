@@ -129,7 +129,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="旧设计稿.docx" />
+    <None Include="设计稿.docx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
