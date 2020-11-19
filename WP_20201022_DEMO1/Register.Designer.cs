@@ -51,6 +51,8 @@
             this.tb_userName.Size = new System.Drawing.Size(119, 22);
             this.tb_userName.TabIndex = 0;
             this.tb_userName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_userName_KeyPress);
+            this.tb_userName.GotFocus += tb_userName_GotFocus;
+            this.tb_userName.LostFocus += tb_userName_LostFocus;
             // 
             // tb_userPw
             // 
@@ -59,6 +61,8 @@
             this.tb_userPw.Size = new System.Drawing.Size(119, 22);
             this.tb_userPw.TabIndex = 1;
             this.tb_userPw.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_userPw_KeyPress);
+            this.tb_userPw.GotFocus += tb_userPw_GotFocus;
+            this.tb_userPw.LostFocus += tb_userPw_LostFocus;
             // 
             // tb_confirmPw
             // 
@@ -66,6 +70,8 @@
             this.tb_confirmPw.Name = "tb_confirmPw";
             this.tb_confirmPw.Size = new System.Drawing.Size(119, 22);
             this.tb_confirmPw.TabIndex = 2;
+            this.tb_confirmPw.GotFocus += tb_confirmPw_GotFocus;
+            this.tb_confirmPw.LostFocus += tb_confirmPw_LostFocus;
             // 
             // btn_check
             // 
@@ -182,6 +188,16 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void Tb_userPw_GotFocus(object sender, System.EventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        private void Tb_userName_LostFocus(object sender, System.EventArgs e)
+        {
+            throw new System.NotImplementedException();
         }
 
         #endregion
