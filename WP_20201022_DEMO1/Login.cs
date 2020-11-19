@@ -55,6 +55,32 @@ namespace WP_20201022_DEMO1
                     userName = obj.UserName;
                     playMark = obj.PlayMark;
                     password = obj.Password;
+                    if (Form1.Instance.formShowed)
+                    {
+                        Form1.Instance.userName = obj.UserName;
+                        if (Form1.Instance.playMark != 0)
+                        {
+                            DialogResult playMarkCheck;
+                            playMarkCheck = MessageBox.Show("你是否要把现在的分数加到存档", "", MessageBoxButtons.YesNo);
+                            if (playMarkCheck == System.Windows.Forms.DialogResult.Yes)
+                            {
+                                Form1.Instance.playMark = Form1.Instance.playMark + obj.PlayMark;
+                                Form1.Instance.update();
+                            }
+                            if (playMarkCheck == System.Windows.Forms.DialogResult.No)
+                            {
+                                Form1.Instance.playMark= obj.PlayMark;
+                                Form1.Instance.update();
+                            }
+                        }
+                        else
+                        {
+                            Form1.Instance.playMark = obj.PlayMark;
+                            Form1.Instance.update();
+                        }
+                    }
+
+
                     Close();
                 }
                 else

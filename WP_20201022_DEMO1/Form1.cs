@@ -15,6 +15,8 @@ namespace WP_20201022_DEMO1
 {
     public partial class Form1 : Form
     {
+        public static Form1 Instance { get; set; }
+
         List<Image> imagelist = new List<Image>();
         Poker p = new Poker();
         List<int> poker;
@@ -34,8 +36,19 @@ namespace WP_20201022_DEMO1
 
         public Form1()
         {
+            if (Instance == null)
+            {
+                Instance = this;
+            }
+
             InitializeComponent();
         }
+        public void update()
+        {
+            lb_mark.Text = playMark.ToString();
+            lb_userName.Text = userName;
+        }
+
 
         #region 生命周期
         private void Form1_Load(object sender, EventArgs e)
@@ -1514,6 +1527,8 @@ namespace WP_20201022_DEMO1
         }
 
         #endregion
+
+
 
     }
 

@@ -77,21 +77,14 @@ namespace WP_20201022_DEMO1
         #region 选单
         private void ts_login_Click(object sender, EventArgs e)
         {
-            if (!loginForm.notLoginStart)
+            if (!cantlogin)
             {
-                if (!cantlogin)
-                {
-                    loginForm = new Login();
-                    loginForm.Show();
-                }
-                else
-                {
-                    MessageBox.Show("无法建立连线，连线功能无法使用！");
-                }
+                loginForm = new Login();
+                loginForm.Show();
             }
             else
             {
-                MessageBox.Show("你已用游客的身份开始游戏！");
+                MessageBox.Show("无法建立连线，连线功能无法使用！");
             }
 
         }
@@ -116,7 +109,6 @@ namespace WP_20201022_DEMO1
                 if (!loginForm.logined)
                 {
                     DialogResult loginCheckResult;
-                    MessageBox.Show("以游客的身份游玩将再无法登入和储存");
                     loginCheckResult = MessageBox.Show("你是否不登入就开始游戏", "", MessageBoxButtons.YesNo);
                     if (loginCheckResult == System.Windows.Forms.DialogResult.Yes)
                     {
